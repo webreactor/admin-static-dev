@@ -77,13 +77,9 @@ p {
 
 .lead {
     margin-bottom: @line-height-computed;
-    font-size:     floor((@font-size-base * 1.15));
+    font-size:     (@font-size-base * 1.5);
     font-weight:   300;
     line-height:   1.4;
-
-    @media (min-width: @screen-sm-min) {
-        font-size: (@font-size-base * 1.5);
-    }
 }
 
 // Emphasis & misc
@@ -254,22 +250,18 @@ dd {
 // grid breakpoint is reached (default of ~768px).
 
 .dl-horizontal {
-    dd {
-        &:extend(.clearfix all); // Clear the floated `dt` if an empty `dd` is present
+    dt {
+        float:      left;
+        width:      (@dl-horizontal-offset - 20);
+        clear:      left;
+        text-align: right;
+        .text-overflow();
     }
 
-    @media (min-width: @grid-float-breakpoint) {
-        dt {
-            float:      left;
-            width:      (@dl-horizontal-offset - 20);
-            clear:      left;
-            text-align: right;
-            .text-overflow();
-        }
+    dd {
+        margin-left: @dl-horizontal-offset;
 
-        dd {
-            margin-left: @dl-horizontal-offset;
-        }
+        &:extend(.clearfix all); // Clear the floated `dt` if an empty `dd` is present
     }
 }
 

@@ -22,7 +22,7 @@ html(lang='ru')
         include header
         div(class='container-fluid')
             div(class='row')
-                div(class='col-sm-3 col-md-2 sidebar')
+                div(class='col-2 sidebar')
                     ul(class='nav nav-sidebar')
                         li(class='active')
                             a(href='javascript:void(0)')= 'Overview'
@@ -50,7 +50,7 @@ html(lang='ru')
                             a(href='javascript:void(0)')= 'One more nav'
                         li
                             a(href='javascript:void(0)')= 'Another nav item'
-                div(class='col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main')
+                div(class='col-10 col-offset-2 main')
                     include breadcrumb
                     block content
         block scripts

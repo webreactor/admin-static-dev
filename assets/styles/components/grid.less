@@ -9,7 +9,7 @@
 .container {
     .container-fixed();
 
-    width: @container-lg;
+    width: @container-width;
 }
 
 // Fluid container
@@ -40,29 +40,4 @@
 // Columns, offsets, pushes, and pulls for extra small devices like
 // smartphones.
 
-.make-grid(xs);
-
-// Small grid
-//
-// Columns, offsets, pushes, and pulls for the small device range, from phones
-// to tablets.
-
-@media (min-width: @screen-sm-min) {
-    .make-grid(sm);
-}
-
-// Medium grid
-//
-// Columns, offsets, pushes, and pulls for the desktop device range.
-
-@media (min-width: @screen-md-min) {
-    .make-grid(md);
-}
-
-// Large grid
-//
-// Columns, offsets, pushes, and pulls for the large desktop device range.
-
-@media (min-width: @screen-lg-min) {
-    .make-grid(lg);
-}
+.make-grid();
