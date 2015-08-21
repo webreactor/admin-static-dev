@@ -1,0 +1,144 @@
+.product-view {
+    .part-number {
+        font-size: 12px;
+    }
+
+    .photos {
+        margin-top: 20px;
+        overflow:   hidden;
+
+        .flex-viewport {
+            .slides {
+                li {
+                    height:      300px;
+                    line-height: 300px;
+                    text-align:  center;
+                    width:       300px;
+
+                    img {
+                        max-height:     300px;
+                        max-width:      300px;
+                        vertical-align: middle;
+                    }
+
+                    @media (max-width: @screen-xs-max) {
+                        height:      200px;
+                        line-height: 200px;
+                        width:       200px;
+
+                        img {
+                            max-height: 200px;
+                            max-width:  200px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .flex-control-nav {
+            margin-top: 20px;
+            position:   static;
+        }
+
+        .flex-direction-nav {
+            display: none;
+        }
+    }
+
+    .info {
+        margin-top: 20px;
+        text-align: center;
+
+        .price {
+            font-size:   30px;
+            font-weight: bold;
+            margin-top:  10px;
+
+            i {
+                font-size: 24px;
+            }
+        }
+
+        .basket {
+            margin-top: 10px;
+        }
+
+        .recall {
+            margin-top: 10px;
+        }
+    }
+
+    .delivery {
+        margin-bottom: 0;
+        margin-top:    20px;
+
+        p {
+            margin-bottom: 0;
+            margin-top:    10px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .properties-panel {
+        margin-top: 20px;
+
+        .properties {
+            font-size: 13px;
+            width:     100%;
+
+            .delimiter {
+                font-size:     18px;
+                font-weight:   bold;
+                margin-bottom: 10px;
+            }
+
+            td {
+                padding-bottom: 15px;
+
+                span {
+                    position: relative;
+                    top:      4px;
+                }
+
+                &.header {
+                    display:        table-cell;
+                    padding-bottom: 0;
+                    padding-top:    10px;
+                }
+
+                &.key {
+                    padding-right:  0;
+                    vertical-align: top;
+                    width:          65%;
+
+                    div {
+                        border-bottom: 1px dotted @gray-lighter;
+
+                        span {
+                            background-color: @body-bg;
+                            color:            @gray;
+                            padding-right:    2px;
+                        }
+                    }
+                }
+
+                &.value {
+                    padding-left:   0;
+                    vertical-align: bottom;
+                    width:          35%;
+
+                    span {
+                        padding-left: 3px;
+                    }
+                }
+            }
+        }
+    }
+
+    .similar {
+        margin-top: 20px;
+    }
+}

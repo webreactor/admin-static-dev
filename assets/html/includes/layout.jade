@@ -1,0 +1,57 @@
+doctype html
+html(lang='ru')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        //meta(name='viewport' content='width=device-width, initial-scale=1')
+        title
+            block title
+                = 'Интернет-магазин компьютеров и компьютерных комплектующих XCOM-SHOP'
+        link(rel='icon' href='img/favicon.ico')
+        block styles
+            link(rel='stylesheet' href='css/app.css')
+        <!--[if lt IE 9]>
+        script(src='//oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js')
+        script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
+        <![endif]-->
+    body
+        <!--[if lt IE 8]>
+        div(class='alert alert-danger browserupgrade')
+            | Вы используете <strong>устаревший</strong> браузер. Пожалуйста, <a href="http://outdatedbrowser.com/ru" target="_blank" class="alert-link">обновите браузер</a> для нормальной работы сайта.'
+        <![endif]-->
+        include header
+        div(class='container-fluid')
+            div(class='row')
+                div(class='col-sm-3 col-md-2 sidebar')
+                    ul(class='nav nav-sidebar')
+                        li(class='active')
+                            a(href='javascript:void(0)')= 'Overview'
+                        li
+                            a(href='javascript:void(0)')= 'Reports'
+                        li
+                            a(href='javascript:void(0)')= 'Analytics'
+                        li
+                            a(href='javascript:void(0)')= 'Export'
+                    ul(class='nav nav-sidebar')
+                        li
+                            a(href='javascript:void(0)')= 'Nav item'
+                        li
+                            a(href='javascript:void(0)')= 'Nav item again'
+                        li
+                            a(href='javascript:void(0)')= 'One more nav'
+                        li
+                            a(href='javascript:void(0)')= 'Another nav item'
+                        li
+                            a(href='javascript:void(0)')= 'More navigation'
+                    ul(class='nav nav-sidebar')
+                        li
+                            a(href='javascript:void(0)')= 'Nav item again'
+                        li
+                            a(href='javascript:void(0)')= 'One more nav'
+                        li
+                            a(href='javascript:void(0)')= 'Another nav item'
+                div(class='col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main')
+                    include breadcrumb
+                    block content
+        block scripts
+            script(src='js/app.js')

@@ -1,0 +1,23 @@
+{
+    "name":            "ecto-xcom-frontend",
+    "version":         "1.0.0",
+    "private":         true,
+    "main":            "gulpfile.js",
+    "dependencies":    {
+        "del":          "*",
+        "jade":         "*",
+        "gulp":         "*",
+        "gulp-newer":   "*",
+        "gulp-concat":  "*",
+        "gulp-uglify":  "*",
+        "gulp-wrapper": "*",
+        "gulp-data":    "*",
+        "gulp-csso":    "*",
+        "gulp-less":    "*",
+        "gulp-jade":    "*"
+    },
+    "devDependencies": { },
+    "scripts":         {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    }
+}

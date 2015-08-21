@@ -1,0 +1,58 @@
+{
+    "build": {
+        "src":  {
+            "html":  [
+                "./assets/html/*.jade"
+            ],
+            "css":   {
+                "app": [
+                    "./assets/styles/app.less"
+                ]
+            },
+            "js":    {
+                "app":          [
+                    "bower_components/jquery/dist/jquery.js",
+                    "bower_components/select2/dist/js/select2.js",
+                    "bower_components/select2/dist/js/i18n/ru.js",
+                    "assets/scripts/components/tooltip.js",
+                    "assets/scripts/components/affix.js",
+                    "assets/scripts/components/alert.js",
+                    "assets/scripts/components/button.js",
+                    "assets/scripts/components/carousel.js",
+                    "assets/scripts/components/collapse.js",
+                    "assets/scripts/components/dropdown.js",
+                    "assets/scripts/components/modal.js",
+                    "assets/scripts/components/popover.js",
+                    "assets/scripts/components/scrollspy.js",
+                    "assets/scripts/components/tab.js",
+                    "assets/scripts/components/transition.js",
+                    "assets/scripts/frontend/app.js"
+                ],
+                "catalog":      [
+                    "./assets/scripts/catalog.js"
+                ],
+                "product_view": [
+                    "./assets/scripts/product-view.js"
+                ]
+            },
+            "img":   [
+                "assets/images/**/*.png",
+                "assets/images/**/*.gif",
+                "assets/images/**/*.jpg",
+                "assets/images/**/*.jpeg",
+                "assets/images/**/*.ico"
+            ],
+            "fonts": [
+                "assets/fonts/**/*",
+                "bower_components/font-awesome/fonts/**/*"
+            ]
+        },
+        "dest": {
+            "html":  "web",
+            "css":   "web/css",
+            "js":    "web/js",
+            "img":   "web/img",
+            "fonts": "web/fonts"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name":         "ecto/xcom-frontend",
+    "private":      true,
+    "dependencies": {
+        "modernizr":    "git@github.com:Modernizr/Modernizr.git",
+        "jquery":       "1.*",
+        "normalize":    "git@github.com:necolas/normalize.css.git",
+        "font-awesome": "*",
+        "select2":      "~4.0.0"
+    }
+}

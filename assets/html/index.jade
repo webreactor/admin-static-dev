@@ -1,0 +1,18 @@
+extends includes/layout
+
+prepend title
+    = 'Компьютеры и комплектующие / '
+
+append breadcrumb
+    li(class='active')= 'Компьютеры и комплектующие'
+
+append scripts
+    script(src='js/catalog.js')
+
+append content
+    h1(class='page-header')= 'Dashboard'
+    div(class='row placeholders')
+        div(class='col-xs-6 col-sm-3 placeholder')
+            img(class='img-responsive' src='http://placehold.it/200x200' alt='Generic placeholder thumbnail')
+            h4= 'Label'
+            span(class='text-muted')= 'Something else'

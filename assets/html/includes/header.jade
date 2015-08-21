@@ -1,0 +1,19 @@
+nav(class='navbar navbar-inverse navbar-fixed-top')
+    div(class='container-fluid')
+        div(class='navbar-header')
+            button(type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#navbar' aria-expanded='false' aria-controls='navbar')
+                span(class='sr-only')= 'Toggle navigation'
+                span(class='icon-bar')
+                span(class='icon-bar')
+                span(class='icon-bar')
+            a(class='navbar-brand' href='index.html')= 'Xcom-shop'
+        div(id='navbar' class='navbar-collapse collapse')
+            ul(class='nav navbar-nav')
+                li
+                    a(href='http://xcom-shop.ru/')
+                        | Перейти на&nbsp;сайт <i class="fa fa-external-link"></i>
+            ul(class='nav navbar-nav navbar-right')
+                li(class=navActive == 'articles' ? 'active' : undefined)
+                    a(href='articles.html')= 'Статьи'
+                li
+                    a(href='javascript:void(0)')= 'Выход'
