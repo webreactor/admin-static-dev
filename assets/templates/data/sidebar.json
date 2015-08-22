@@ -1,0 +1,244 @@
+{
+    "sidebar": [
+        {
+            "name": "<i class=\"fa fa-home\"></i> Главная",
+            "path": "index.html"
+        },
+        {
+            "name": "Cheet sheet",
+            "path": "cheatsheet.html"
+        },
+        {
+            "name":   "Рассылки",
+            "path":   "javascript:window.location.href=window.location.href",
+            "childs": [
+                {
+                    "name": "Новости магазина",
+                    "path": "javascript:window.location.href=window.location.href"
+                }
+            ]
+        },
+        {
+            "name": "Новости",
+            "path": "javascript:window.location.href=window.location.href"
+        },
+        {
+            "name": "Статьи",
+            "path": "javascript:window.location.href=window.location.href"
+        },
+        {
+            "name":   "Акции",
+            "path":   "javascript:window.location.href=window.location.href",
+            "childs": [
+                {
+                    "name": "Группы ротаций",
+                    "path": "javascript:window.location.href=window.location.href"
+                },
+                {
+                    "name": "Плитки",
+                    "path": "javascript:window.location.href=window.location.href"
+                }
+            ]
+        },
+        {
+            "name":   "Обратная связь",
+            "path":   "javascript:window.location.href=window.location.href",
+            "childs": [
+                {
+                    "name": "Заявки на изменение данных",
+                    "path": "javascript:window.location.href=window.location.href"
+                }
+            ]
+        },
+        {
+            "name": "Игры разума",
+            "path": "javascript:window.location.href=window.location.href"
+        },
+        {
+            "name":   "Комментарии",
+            "path":   "javascript:window.location.href=window.location.href",
+            "childs": [
+                {
+                    "name": "Список забаненных",
+                    "path": "javascript:window.location.href=window.location.href"
+                },
+                {
+                    "name": "Последние комментарии",
+                    "path": "javascript:window.location.href=window.location.href"
+                }
+            ]
+        },
+        {
+            "name":   "Описания товаров",
+            "path":   "javascript:window.location.href=window.location.href",
+            "childs": [
+                {
+                    "name": "Экспорт описаний за неделю",
+                    "path": "javascript:window.location.href=window.location.href"
+                },
+                {
+                    "name": "Словари",
+                    "path": "javascript:window.location.href=window.location.href"
+                },
+                {
+                    "name": "Товарные группы",
+                    "path": "javascript:window.location.href=window.location.href"
+                },
+                {
+                    "name": "Сертификаты производителей",
+                    "path": "javascript:window.location.href=window.location.href"
+                }
+            ]
+        },
+        {
+            "name":   "Менеджеры",
+            "path":   "javascript:window.location.href=window.location.href",
+            "childs": [
+                {
+                    "name": "Исключения и выходные",
+                    "path": "javascript:window.location.href=window.location.href"
+                },
+                {
+                    "name": "Уволенные",
+                    "path": "javascript:window.location.href=window.location.href"
+                },
+                {
+                    "name": "Обратная связь",
+                    "path": "javascript:window.location.href=window.location.href"
+                },
+                {
+                    "name": "Рабочие часы",
+                    "path": "javascript:window.location.href=window.location.href"
+                },
+                {
+                    "name": "Расписание",
+                    "path": "javascript:window.location.href=window.location.href"
+                }
+            ]
+        },
+        {
+            "name": "Страховки",
+            "path": "javascript:window.location.href=window.location.href"
+        },
+        {
+            "name":   "Заказы",
+            "path":   "javascript:window.location.href=window.location.href",
+            "childs": [
+                {
+                    "name": "Пункты самовывоза",
+                    "path": "javascript:window.location.href=window.location.href"
+                },
+                {
+                    "name": "Перемещение заказов",
+                    "path": "javascript:window.location.href=window.location.href"
+                },
+                {
+                    "name": "Домены",
+                    "path": "javascript:window.location.href=window.location.href"
+                },
+                {
+                    "name": "Бонусные баллы",
+                    "path": "javascript:window.location.href=window.location.href"
+                },
+                {
+                    "name": "Города",
+                    "path": "javascript:window.location.href=window.location.href"
+                },
+                {
+                    "name": "Станции метро",
+                    "path": "javascript:window.location.href=window.location.href"
+                },
+                {
+                    "name": "Пользователи",
+                    "path": "javascript:window.location.href=window.location.href"
+                }
+            ]
+        },
+        {
+            "name":   "Каталог",
+            "path":   "javascript:window.location.href=window.location.href",
+            "childs": [
+                {
+                    "name": "Экспорт Ecwid",
+                    "path": "javascript:window.location.href=window.location.href"
+                },
+                {
+                    "name": "Подбор картриджей",
+                    "path": "javascript:window.location.href=window.location.href"
+                },
+                {
+                    "name": "Проблемные цены",
+                    "path": "javascript:window.location.href=window.location.href"
+                },
+                {
+                    "name": "Переадресация",
+                    "path": "javascript:window.location.href=window.location.href"
+                },
+                {
+                    "name": "Зачеркнутые цены",
+                    "path": "javascript:window.location.href=window.location.href"
+                },
+                {
+                    "name": "Товары",
+                    "path": "javascript:window.location.href=window.location.href"
+                }
+            ]
+        },
+        {
+            "name":   "Статические страницы",
+            "path":   "javascript:window.location.href=window.location.href",
+            "childs": [
+                {
+                    "name": "Статические блоки",
+                    "path": "javascript:window.location.href=window.location.href"
+                },
+                {
+                    "name": "Баннеры",
+                    "path": "javascript:window.location.href=window.location.href"
+                }
+            ]
+        },
+        {
+            "name":   "Мобильная версия",
+            "path":   "javascript:window.location.href=window.location.href",
+            "childs": [
+                {
+                    "name": "Статические блоки",
+                    "path": "javascript:window.location.href=window.location.href"
+                }
+            ]
+        },
+        {
+            "name":   "Обслуживание",
+            "path":   "javascript:window.location.href=window.location.href",
+            "childs": [
+                {
+                    "name": "Выполненные",
+                    "path": "javascript:window.location.href=window.location.href"
+                }
+            ]
+        },
+        {
+            "name":   "Модули",
+            "path":   "javascript:window.location.href=window.location.href",
+            "childs": [
+                {
+                    "name": "Справка",
+                    "path": "javascript:window.location.href=window.location.href"
+                },
+                {
+                    "name": "Пользователи",
+                    "path": "javascript:window.location.href=window.location.href"
+                },
+                {
+                    "name": "Группы",
+                    "path": "javascript:window.location.href=window.location.href"
+                },
+                {
+                    "name": "Дерево сайта",
+                    "path": "javascript:window.location.href=window.location.href"
+                }
+            ]
+        }
+    ]
+}

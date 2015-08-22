@@ -1,0 +1,12 @@
+extends includes/layout
+
+block breadcrumb-wrap
+    ol(class='breadcrumb')
+        block breadcrumb
+            li
+                a(href='http://xcom-shop.ru/')
+                    i(class='fa fa-home')
+            li(class='active')= 'Панель администратора'
+
+append content
+    h1(class='page-header')= 'Панель администратора'

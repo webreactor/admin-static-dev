@@ -1,5 +1,6 @@
 @import "core";
 @import "vendor/select2";
+
 //@import "pages/product-list";
 //@import "pages/product-view";
 //@import "pages/article-list";
@@ -46,19 +47,32 @@ body {
 
     > li {
         > a {
-            padding-right: 20px;
-            padding-left:  20px;
+            font-size: 14px;
+            font-weight: bold;
+            padding-right: 15px;
+            padding-left:  15px;
         }
     }
 
     &,
-    > .active {
+    .active {
         > a {
             &,
             &:hover,
             &:focus {
                 color:            #fff;
                 background-color: #428bca;
+            }
+        }
+    }
+
+    ul {
+        li {
+            > a {
+                font-size:     13px;
+                padding-bottom: 5px;
+                padding-left:   25px;
+                padding-top:    5px;
             }
         }
     }
@@ -74,23 +88,5 @@ body {
     @media (min-width: 768px) {
         padding-right: 40px;
         padding-left:  40px;
-    }
-}
-
-.placeholders {
-    margin-bottom: 30px;
-    text-align:    center;
-
-    h4 {
-        margin-bottom: 0;
-    }
-}
-
-.placeholder {
-    margin-bottom: 20px;
-
-    img {
-        display:       inline-block;
-        border-radius: 50%;
     }
 }

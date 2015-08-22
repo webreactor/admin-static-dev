@@ -4,6 +4,7 @@
     "private":         true,
     "main":            "gulpfile.js",
     "dependencies":    {
+        "browser-sync": "*",
         "del":          "*",
         "jade":         "*",
         "gulp":         "*",

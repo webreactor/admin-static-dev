@@ -1,16 +1,27 @@
 {
+    "data":  {
+        "core":       [
+            "./assets/templates/data/sidebar.json"
+        ],
+        "index":      [
+            "./assets/templates/data/index.json"
+        ],
+        "cheatsheet": [
+            "./assets/templates/data/cheatsheet.json"
+        ]
+    },
     "build": {
         "src":  {
-            "html":  [
-                "./assets/html/*.jade"
+            "templates": [
+                "./assets/templates/*.jade"
             ],
-            "css":   {
+            "css":       {
                 "app": [
                     "./assets/styles/app.less"
                 ]
             },
-            "js":    {
-                "app":          [
+            "js":        {
+                "app": [
                     "bower_components/jquery/dist/jquery.js",
                     "bower_components/select2/dist/js/select2.js",
                     "bower_components/select2/dist/js/i18n/ru.js",
@@ -27,32 +38,37 @@
                     "assets/scripts/components/tab.js",
                     "assets/scripts/components/transition.js",
                     "assets/scripts/frontend/app.js"
-                ],
-                "catalog":      [
-                    "./assets/scripts/catalog.js"
-                ],
-                "product_view": [
-                    "./assets/scripts/product-view.js"
                 ]
             },
-            "img":   [
+            "img":       [
                 "assets/images/**/*.png",
                 "assets/images/**/*.gif",
                 "assets/images/**/*.jpg",
                 "assets/images/**/*.jpeg",
                 "assets/images/**/*.ico"
             ],
-            "fonts": [
+            "fonts":     [
                 "assets/fonts/**/*",
                 "bower_components/font-awesome/fonts/**/*"
             ]
         },
         "dest": {
-            "html":  "web",
-            "css":   "web/css",
-            "js":    "web/js",
-            "img":   "web/img",
-            "fonts": "web/fonts"
+            "templates": "web",
+            "css":       "web/css",
+            "js":        "web/js",
+            "img":       "web/img",
+            "fonts":     "web/fonts"
         }
+    },
+    "watch": {
+        "templates": "./assets/templates/**/*",
+        "css":       {
+            "app": "./assets/styles/**/*"
+        },
+        "js":        {
+            "app": "./assets/scripts/**/*"
+        },
+        "img":       "assets/images/**/*",
+        "fonts":     "assets/fonts/**/*"
     }
 }
