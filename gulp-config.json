@@ -1,13 +1,17 @@
 {
     "data":  {
-        "core":       [
+        "core":  [
+            "./assets/templates/data/navbar.json",
             "./assets/templates/data/sidebar.json"
         ],
-        "index":      [
+        "index": [
             "./assets/templates/data/index.json"
         ],
-        "cheatsheet": [
-            "./assets/templates/data/cheatsheet.json"
+        "list":  [
+            "./assets/templates/data/list.json"
+        ],
+        "form":  [
+            "./assets/templates/data/form.json"
         ]
     },
     "build": {
@@ -21,10 +25,17 @@
                 ]
             },
             "js":        {
-                "app": [
+                "app":  [
                     "bower_components/jquery/dist/jquery.js",
                     "bower_components/select2/dist/js/select2.js",
                     "bower_components/select2/dist/js/i18n/ru.js",
+                    "bower_components/moment/moment.js",
+                    "bower_components/moment/locale/ru.js",
+                    "bower_components/bootstrap-daterangepicker/daterangepicker.js",
+                    "bower_components/handlebars/handlebars.runtime.js",
+                    "bower_components/wysihtml5x/dist/wysihtml5x-toolbar.js",
+                    "bower_components/bootstrap3-wysihtml5-bower/dist/bootstrap3-wysihtml5.js",
+                    "bower_components/bootstrap3-wysihtml5-bower/dist/locales/bootstrap-wysihtml5.ru-RU.js",
                     "assets/scripts/components/tooltip.js",
                     "assets/scripts/components/affix.js",
                     "assets/scripts/components/alert.js",
@@ -37,7 +48,13 @@
                     "assets/scripts/components/scrollspy.js",
                     "assets/scripts/components/tab.js",
                     "assets/scripts/components/transition.js",
-                    "assets/scripts/frontend/app.js"
+                    "assets/scripts/app.js"
+                ],
+                "list": [
+                    "assets/scripts/list.js"
+                ],
+                "form": [
+                    "assets/scripts/form.js"
                 ]
             },
             "img":       [
@@ -61,12 +78,15 @@
         }
     },
     "watch": {
-        "templates": "./assets/templates/**/*",
+        "templates": [
+            "./assets/templates/**/*.jade",
+            "./assets/templates/**/*.json"
+        ],
         "css":       {
-            "app": "./assets/styles/**/*"
+            "app": "./assets/styles/**/*.less"
         },
         "js":        {
-            "app": "./assets/scripts/**/*"
+            "app": "./assets/scripts/**/*.js"
         },
         "img":       "assets/images/**/*",
         "fonts":     "assets/fonts/**/*"

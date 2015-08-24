@@ -1,0 +1,56 @@
+extends includes/layout
+
+prepend title
+    = 'Покупать с PayPal стало ещё приятнее / Новости / '
+
+append scripts
+    script(src='js/form.js')
+
+append breadcrumb
+    li
+        a(href='list.html')= 'Новости'
+    li(class='active')= 'Покупать с PayPal стало ещё приятнее'
+
+append content
+    h1(class='page-header')= 'Покупать с PayPal стало ещё приятнее'
+    div(class='page-list')
+        form(class='form-horizontal')
+            div(class='form-group')
+                label(for='inputDate' class='col-2 control-label')= 'Дата создания'
+                div(class='col-10')
+                    input(type='text' class='form-control' id='inputDate' value='2015.08.01')
+            div(class='form-group')
+                label(for='inputTitle' class='col-2 control-label')= 'Заголовок'
+                div(class='col-10')
+                    input(type='text' class='form-control' id='inputTitle' value='Покупать с PayPal стало ещё приятнее')
+            div(class='form-group')
+                label(for='inputPicture' class='col-2 control-label')= 'Картинка'
+                div(class='col-10')
+                    input(type='file' id='inputPicture')
+                    p(class='help-block')= 'Не больше 5 МБ.'
+            div(class='form-group')
+                label(for='textareaPreview' class='col-2 control-label')= 'Превью'
+                div(class='col-10')
+                    textarea(class='form-control wysihtml5' id='textareaPreview')
+                        | <p>PayPal увеличивает срок, в течение которого можно начать диспут в Центре разрешения проблем. Теперь максимальный срок — 180 дней. Целых полгода ваши деньги находятся под надёжной защитой PayPal! Оплачивать покупки электронным способом стало ещё удобнее, безопаснее и приятнее.</p>
+            div(class='form-group')
+                label(for='textareaContent' class='col-2 control-label')= 'Новость'
+                div(class='col-10')
+                    textarea(class='form-control wysihtml5' id='textareaContent')
+                        | <p>PayPal увеличивает срок, в течение которого можно начать диспут в Центре разрешения проблем. Теперь максимальный срок — 180 дней. Целых полгода ваши деньги находятся под надёжной защитой PayPal! Оплачивать покупки электронным способом стало ещё удобнее, безопаснее и приятнее.</p><p>Если вы не знаете, что такое PayPal и как он может помочь вам сделать шопинг более приятным и безопасным — <a href="https://www.paypal.com/ru/webapps/mpp/pay-online">пора это исправить</a>!</p>
+            div(class='form-group')
+                label(for='inputTags' class='col-2 control-label')= 'Теги'
+                div(class='col-10')
+                    select(class='form-control' multiple='multiple' id='inputTags')
+                        option(selected='selected')= 'PayPal'
+                        option= 'покупки'
+                        option(selected='selected')= 'шоппинг'
+            div(class='form-group')
+                div(class='col-offset-2 col-10')
+                    div(class='checkbox')
+                        label
+                            input(type='checkbox' checked='checked')
+                            = 'Показывать на главной'
+            div(class='form-group')
+                div(class='col-offset-2 col-10')
+                    button(type='submit' class='btn btn-default')= 'Сохранить'

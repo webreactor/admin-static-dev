@@ -1,0 +1,20 @@
+{
+    "navbarItems": [
+        {
+            "name": "Пример списка",
+            "path": "list.html"
+        },
+        {
+            "name": "Пример формы",
+            "path": "form.html"
+        },
+        {
+            "name": "ivan@ivanov.ru",
+            "path": "javascript:window.location.href=window.location.href"
+        },
+        {
+            "name": "Выход",
+            "path": "javascript:window.location.href=window.location.href"
+        }
+    ]
+}

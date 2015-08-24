@@ -63,6 +63,7 @@ gulp.task('css-app', function () {
         .pipe(gulpLess())
         .on('error', handleError)
         .pipe(gulpCsso())
+        .on('error', handleError)
         .pipe(gulpWrapper({ header: '\n/* ${filename} */\n\n' }))
         .pipe(gulpConcat('app.css'))
         .pipe(gulp.dest(config.build.dest.css))
@@ -86,13 +87,34 @@ gulp.task('templates', function () {
 gulp.task('js-app', function () {
     return gulp.src(config.build.src.js.app)
         .pipe(gulpUglify())
+        .on('error', handleError)
         .pipe(gulpWrapper({ header: '\n// ${filename}\n\n' }))
         .pipe(gulpConcat('app.js'))
         .pipe(gulp.dest(config.build.dest.js))
         .pipe(browserSync.stream());
 });
 
-gulp.task('js', ['js-app']);
+gulp.task('js-list', function () {
+    return gulp.src(config.build.src.js.list)
+        .pipe(gulpUglify())
+        .on('error', handleError)
+        .pipe(gulpWrapper({ header: '\n// ${filename}\n\n' }))
+        .pipe(gulpConcat('list.js'))
+        .pipe(gulp.dest(config.build.dest.js))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('js-form', function () {
+    return gulp.src(config.build.src.js.form)
+        .pipe(gulpUglify())
+        .on('error', handleError)
+        .pipe(gulpWrapper({ header: '\n// ${filename}\n\n' }))
+        .pipe(gulpConcat('form.js'))
+        .pipe(gulp.dest(config.build.dest.js))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('js', ['js-app', 'js-list', 'js-form']);
 
 gulp.task('img', function () {
     return gulp.src(config.build.src.img)
@@ -130,8 +152,8 @@ gulp.task('watch', function () {
     });
 
     gulp.watch(config.watch.templates, ['templates']);
-    gulp.watch(config.watch.css.app, ['css-app']);
-    gulp.watch(config.watch.js.app, ['js-app']);
+    gulp.watch(config.watch.css.app, ['css']);
+    gulp.watch(config.watch.js.app, ['js']);
     gulp.watch(config.watch.img, ['img']);
     gulp.watch(config.watch.fonts, ['fonts']);
 });

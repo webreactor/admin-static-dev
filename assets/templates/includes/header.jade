@@ -1,13 +1,11 @@
 nav(class='navbar navbar-inverse navbar-fixed-top')
     div(class='container-fluid')
         div(class='navbar-header')
-            a(class='navbar-brand' href='index.html')= 'Xcom-shop'
+            a(class='navbar-brand' href='index.html')
+                = 'Xcom-shop '
+                span(class='beta') &beta;
             ul(class='nav navbar-nav')
                 li
                     a(href='http://xcom-shop.ru/')
                         | Перейти на&nbsp;сайт <i class="fa fa-external-link"></i>
-            ul(class='nav navbar-nav navbar-right')
-                li
-                    a(href='javascript:window.location.href=window.location.href')= 'root'
-                li
-                    a(href='javascript:window.location.href=window.location.href')= 'Выход'
+            include navbar

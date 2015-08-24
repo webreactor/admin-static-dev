@@ -56,21 +56,7 @@
     // we missed it. We don't currently support this anywhere, but in the interest
     // of maintaining backward compatibility in case you use it, it's deprecated.
     .nav-divider {
-        .nav-divider(#d8d8d8);
-
-        overflow: visible;
-        position: relative;
-
-        &:after {
-            .nav-divider(lighten(#d8d8d8, 20%));
-
-            content:  ' ';
-            left:     0;
-            margin:   0;
-            position: absolute;
-            right:    0;
-            top:      1px;
-        }
+        .nav-divider();
     }
 
     // Prevent IE8 from misplacing imgs
