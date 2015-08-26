@@ -1,0 +1,4 @@
+ul(class='nav navbar-nav navbar-right')
+    each item in navbarItems
+        li(class=item.path == navbarActive ? 'active' : undefined)
+            a(href=item.path)!= item.name

@@ -1,12 +1,8 @@
 {
-    "sidebar": [
+    "sidebarItems": [
         {
             "name": "<i class=\"fa fa-home\"></i> Главная",
             "path": "index.html"
-        },
-        {
-            "name": "Cheet sheet",
-            "path": "cheatsheet.html"
         },
         {
             "name":   "Рассылки",

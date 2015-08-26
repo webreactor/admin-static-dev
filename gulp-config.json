@@ -1,18 +1,25 @@
 {
     "data":  {
-        "core":       [
+        "core":  [
+            "./assets/templates/data/navbar.json",
             "./assets/templates/data/sidebar.json"
         ],
-        "index":      [
+        "index": [
             "./assets/templates/data/index.json"
         ],
-        "cheatsheet": [
-            "./assets/templates/data/cheatsheet.json"
+        "list":  [
+            "./assets/templates/data/list.json"
+        ],
+        "form":  [
+            "./assets/templates/data/form.json"
+        ],
+        "tree":  [
+            "./assets/templates/data/tree.json"
         ]
     },
     "build": {
         "src":  {
-            "templates": [
+            "tpl": [
                 "./assets/templates/*.jade"
             ],
             "css":       {
@@ -21,10 +28,16 @@
                 ]
             },
             "js":        {
-                "app": [
+                "app":  [
                     "bower_components/jquery/dist/jquery.js",
+                    "bower_components/jgrowl/jquery.jgrowl.js",
                     "bower_components/select2/dist/js/select2.js",
                     "bower_components/select2/dist/js/i18n/ru.js",
+                    "bower_components/moment/moment.js",
+                    "bower_components/moment/locale/ru.js",
+                    "bower_components/bootstrap-daterangepicker/daterangepicker.js",
+                    "bower_components/summernote/dist/summernote.js",
+                    "bower_components/summernote/lang/summernote-ru-RU.js",
                     "assets/scripts/components/tooltip.js",
                     "assets/scripts/components/affix.js",
                     "assets/scripts/components/alert.js",
@@ -37,7 +50,17 @@
                     "assets/scripts/components/scrollspy.js",
                     "assets/scripts/components/tab.js",
                     "assets/scripts/components/transition.js",
-                    "assets/scripts/frontend/app.js"
+                    "assets/scripts/app.js"
+                ],
+                "list": [
+                    "assets/scripts/pages/list.js"
+                ],
+                "form": [
+                    "bower_components/fine-uploader/client/jquery.fine-uploader.js",
+                    "assets/scripts/pages/form.js"
+                ],
+                "tree": [
+                    "assets/scripts/pages/tree.js"
                 ]
             },
             "img":       [
@@ -45,7 +68,12 @@
                 "assets/images/**/*.gif",
                 "assets/images/**/*.jpg",
                 "assets/images/**/*.jpeg",
-                "assets/images/**/*.ico"
+                "assets/images/**/*.ico",
+                "assets/vendor/**/*.png",
+                "assets/vendor/**/*.gif",
+                "assets/vendor/**/*.jpg",
+                "assets/vendor/**/*.jpeg",
+                "assets/vendor/**/*.ico"
             ],
             "fonts":     [
                 "assets/fonts/**/*",
@@ -53,7 +81,7 @@
             ]
         },
         "dest": {
-            "templates": "web",
+            "tpl": "web",
             "css":       "web/css",
             "js":        "web/js",
             "img":       "web/img",
@@ -61,12 +89,15 @@
         }
     },
     "watch": {
-        "templates": "./assets/templates/**/*",
+        "tpl": [
+            "./assets/templates/**/*.jade",
+            "./assets/templates/**/*.json"
+        ],
         "css":       {
-            "app": "./assets/styles/**/*"
+            "app": "./assets/styles/**/*.less"
         },
         "js":        {
-            "app": "./assets/scripts/**/*"
+            "app": "./assets/scripts/**/*.js"
         },
         "img":       "assets/images/**/*",
         "fonts":     "assets/fonts/**/*"

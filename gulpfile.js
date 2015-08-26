@@ -63,6 +63,7 @@ gulp.task('css-app', function () {
         .pipe(gulpLess())
         .on('error', handleError)
         .pipe(gulpCsso())
+        .on('error', handleError)
         .pipe(gulpWrapper({ header: '\n/* ${filename} */\n\n' }))
         .pipe(gulpConcat('app.css'))
         .pipe(gulp.dest(config.build.dest.css))
@@ -71,28 +72,59 @@ gulp.task('css-app', function () {
 
 gulp.task('css', ['css-app']);
 
-gulp.task('templates', function () {
-    return gulp.src(config.build.src.templates)
+gulp.task('tpl', function () {
+    return gulp.src(config.build.src.tpl)
         .pipe(gulpData(getJsonData))
         .pipe(gulpJade({
             jade:   jade,
             pretty: true
         }))
         .on('error', handleError)
-        .pipe(gulp.dest(config.build.dest.templates))
+        .pipe(gulp.dest(config.build.dest.tpl))
         .pipe(browserSync.stream());
 });
 
 gulp.task('js-app', function () {
     return gulp.src(config.build.src.js.app)
         .pipe(gulpUglify())
+        .on('error', handleError)
         .pipe(gulpWrapper({ header: '\n// ${filename}\n\n' }))
         .pipe(gulpConcat('app.js'))
         .pipe(gulp.dest(config.build.dest.js))
         .pipe(browserSync.stream());
 });
 
-gulp.task('js', ['js-app']);
+gulp.task('js-list', function () {
+    return gulp.src(config.build.src.js.list)
+        .pipe(gulpUglify())
+        .on('error', handleError)
+        .pipe(gulpWrapper({ header: '\n// ${filename}\n\n' }))
+        .pipe(gulpConcat('list.js'))
+        .pipe(gulp.dest(config.build.dest.js))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('js-form', function () {
+    return gulp.src(config.build.src.js.form)
+        .pipe(gulpUglify())
+        .on('error', handleError)
+        .pipe(gulpWrapper({ header: '\n// ${filename}\n\n' }))
+        .pipe(gulpConcat('form.js'))
+        .pipe(gulp.dest(config.build.dest.js))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('js-tree', function () {
+    return gulp.src(config.build.src.js.tree)
+        .pipe(gulpUglify())
+        .on('error', handleError)
+        .pipe(gulpWrapper({ header: '\n// ${filename}\n\n' }))
+        .pipe(gulpConcat('tree.js'))
+        .pipe(gulp.dest(config.build.dest.js))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('js', ['js-app', 'js-list', 'js-form', 'js-tree']);
 
 gulp.task('img', function () {
     return gulp.src(config.build.src.img)
@@ -109,7 +141,7 @@ gulp.task('fonts', function () {
 });
 
 gulp.task('build', ['img', 'fonts'], function () {
-    gulp.start(['templates', 'css', 'js']);
+    gulp.start(['tpl', 'css', 'js']);
 });
 
 gulp.task('clean', function () {
@@ -129,9 +161,9 @@ gulp.task('watch', function () {
         server: './web'
     });
 
-    gulp.watch(config.watch.templates, ['templates']);
-    gulp.watch(config.watch.css.app, ['css-app']);
-    gulp.watch(config.watch.js.app, ['js-app']);
+    gulp.watch(config.watch.tpl, ['tpl']);
+    gulp.watch(config.watch.css.app, ['css']);
+    gulp.watch(config.watch.js.app, ['js']);
     gulp.watch(config.watch.img, ['img']);
     gulp.watch(config.watch.fonts, ['fonts']);
 });
