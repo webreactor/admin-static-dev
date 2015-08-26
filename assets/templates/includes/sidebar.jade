@@ -1,11 +1,11 @@
-ul(class='nav sidebar-nav')
+ul.nav.sidebar-nav
     each item in sidebarItems
         if item != sidebarItems[0]
-            li(class='nav-divider')
+            li.nav-divider
         li(class=item.path == sidebarActive ? 'active' : undefined)
             a(href=item.path)!= item.name
             if item.childs && item.childs.length > 0
-                ul(class='nav')
+                ul.nav
                     each child in item.childs
                         li(class=child.path == sidebarActive ? 'active' : undefined)
                             a(href=child.path)!= child.name

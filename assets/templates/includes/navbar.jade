@@ -1,4 +1,4 @@
-ul(class='nav navbar-nav navbar-right')
+ul.nav.navbar-nav.navbar-right
     each item in navbarItems
         if item.childs && item.childs.length > 0
             li.dropdown
@@ -9,7 +9,6 @@ ul(class='nav navbar-nav navbar-right')
                     each child in item.childs
                         li(class=(child.path == navbarActive ? 'active' : undefined))
                             a(href=child.path)!= child.name
-                //<li role='separator' class='divider'></li>
         else
             li(class=(item.path == navbarActive ? 'active' : undefined))
                 - linkTarget = item.blank ? '_blank' : undefined

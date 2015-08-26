@@ -7,29 +7,38 @@ append scripts
     script(src='js/list.js')
 
 append breadcrumb
-    li(class='active')= 'Новости'
+    li.active= 'Новости'
 
 append content
-    h1(class='page-header')= 'Новости'
-    div(class='page-list')
-        div(class='well well-sm')
-            form(class='form-inline search-form')
-                div(class='input-group')
-                    span(class='input-group-addon') <i class="fa fa-calendar"></i>
-                    input(type='text' class='form-control daterange' placeholder='Дата' value='2015.08.01 10:00 - 2015.08.31 21:00' id='daterangepicker')
-                input(type='text' class='form-control' placeholder='Заголовок')
-                select(class='form-control' id='select2')
+    h1.page-header= 'Новости'
+    div.page-list
+        div.well.well-sm
+            form.form-inline.search-form
+                div.input-group
+                    span.input-group-addon
+                        i.fa.fa-calendar
+                    input.form-control.daterange#daterangepicker(type='text' placeholder='Дата' value='2015.08.01 10:00 - 2015.08.31 21:00')
+                input.form-control(type='text' placeholder='Заголовок')
+                select.form-control#select2
                     option
                     option shaxtep@gmail.com
                     option begmart@mail.ru
                     option dmitry.v.molchanov@gmail.com
-                button(type='submit' class='btn btn-default')= 'Найти'
-        table(class='table table-striped table-condensed table-hover')
+                button.btn.btn-default(type='submit')
+                    i.fa.fa-search
+                    = ' Найти'
+        table.table.table-striped.table-condensed.table-hover
             thead
                 tr
-                    th Дата создания <i class="fa fa-sort-amount-desc"></i>
-                    th Заголовок <i class="fa fa-sort-alpha-asc"></i>
-                    th Автор <i class="fa fa-sort"></i>
+                    th
+                        = 'Дата создания '
+                        i.fa.fa-sort-amount-desc
+                    th
+                        = 'Заголовок '
+                        i.fa.fa-sort-alpha-asc
+                    th
+                        = 'Автор '
+                        i.fa.fa-sort
                     th
             tbody
                 each item in listItems
@@ -38,13 +47,13 @@ append content
                         td= item.title
                         td= item.author
                         td(style='white-space: nowrap')
-                            a(href='form.html' class='btn btn-xs btn-default' title='Редактировать')
-                                i(class='fa fa-pencil')
-                            button(class='btn btn-xs btn-default delete-confirm-popover' title='' data-delete-url='javascript:window.location.href=window.location.href' data-original-title='Удалить')
-                                i(class='fa fa-times')
+                            a.btn.btn-xs.btn-default(href='form.html' title='Редактировать')
+                                i.fa.fa-pencil
+                            buttona.btn.btn-xs.btn-default.delete-confirm-popover(title='' data-delete-url='javascript:window.location.href=window.location.href' data-original-title='Удалить')
+                                i.fa.fa-times
         nav
-            ul(class='pagination')
-                li(class='active')
+            ul.pagination
+                li.active
                     a(href='javascript:window.location.href=window.location.href')= '1'
                 li
                     a(href='javascript:window.location.href=window.location.href')= '2'
@@ -54,7 +63,7 @@ append content
                     a(href='javascript:window.location.href=window.location.href')= '4'
                 li
                     a(href='javascript:window.location.href=window.location.href')= '5'
-                li(class='disabled')
+                li.disabled
                     span …
                 li
                     a(href='javascript:window.location.href=window.location.href')= '17'
