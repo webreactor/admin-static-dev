@@ -1,24 +1,39 @@
 {
     "navbarItems": [
         {
-            "name": "Пример списка",
-            "path": "list.html"
+            "name":  "Страница авторизации <i class=\"fa fa-external-link\"></i>",
+            "path":  "auth.html",
+            "blank": true
         },
         {
-            "name": "Пример формы",
-            "path": "form.html"
-        },
-        {
-            "name": "Пример дерева",
-            "path": "tree.html"
+            "name":   "Примеры",
+            "childs": [
+                {
+                    "name": "Список",
+                    "path": "list.html"
+                },
+                {
+                    "name": "Форма",
+                    "path": "form.html"
+                },
+                {
+                    "name": "Дерево",
+                    "path": "tree.html"
+                }
+            ]
         },
         {
             "name": "ivan@ivanov.ru",
-            "path": "javascript:window.location.href=window.location.href"
-        },
-        {
-            "name": "Выход",
-            "path": "javascript:window.location.href=window.location.href"
+            "childs": [
+                {
+                    "name": "<i class=\"fa fa-cog\"></i> Настройки",
+                    "path": "javascript:window.location.href=window.location.href"
+                },
+                {
+                    "name": "<i class=\"fa fa-sign-out\"></i> Выход",
+                    "path": "javascript:window.location.href=window.location.href"
+                }
+            ]
         }
     ]
 }

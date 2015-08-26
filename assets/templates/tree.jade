@@ -7,17 +7,17 @@ append scripts
     script(src='js/tree.js')
 
 append breadcrumb
-    li(class='active')= 'Каталог'
+    li.active= 'Каталог'
 
 append content
-    h1(class='page-header')= 'Каталог'
+    h1.page-header= 'Каталог'
     mixin printTrees(treeItems, level, parentID)
         each item in treeItems
-            li(class='list-group-item' data-tree-id=item.id data-parent-tree-id=parentID)
-                span(class='name')= item.name
+            li(data-tree-id=item.id data-parent-tree-id=parentID)
+                span.name= item.name
                 if item.childs && item.childs.length > 0
-                    ul(class='childs')
+                    ul.childs
                         +printTrees(item.childs, level + 1, item.id)
-    div(class='treeview')
-        ul(class='list-group')
+    div.treeview
+        ul
             +printTrees(treeItems, 1, undefined)
