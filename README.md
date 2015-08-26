@@ -95,4 +95,3 @@ TODO
 * Подсветка кода в WYSIWYG-редакторе.
 * Добавить красивые чекбоксы и радио-кнопки (https://github.com/flatlogic/awesome-bootstrap-checkbox)
 * Дерево (каталог).
-* Шаблон страницы авторизации.

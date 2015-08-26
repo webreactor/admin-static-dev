@@ -58,6 +58,18 @@ var getJsonData = function (file, callback) {
     return callback(null, jsonData);
 };
 
+gulp.task('css-auth', function () {
+    return gulp.src(config.build.src.css.auth)
+        .pipe(gulpLess())
+        .on('error', handleError)
+        .pipe(gulpCsso())
+        .on('error', handleError)
+        .pipe(gulpWrapper({ header: '\n/* ${filename} */\n\n' }))
+        .pipe(gulpConcat('auth.css'))
+        .pipe(gulp.dest(config.build.dest.css))
+        .pipe(browserSync.stream());
+});
+
 gulp.task('css-app', function () {
     return gulp.src(config.build.src.css.app)
         .pipe(gulpLess())
@@ -70,7 +82,7 @@ gulp.task('css-app', function () {
         .pipe(browserSync.stream());
 });
 
-gulp.task('css', ['css-app']);
+gulp.task('css', ['css-auth', 'css-app']);
 
 gulp.task('tpl', function () {
     return gulp.src(config.build.src.tpl)

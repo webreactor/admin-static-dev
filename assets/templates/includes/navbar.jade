@@ -1,4 +1,16 @@
 ul(class='nav navbar-nav navbar-right')
     each item in navbarItems
-        li(class=item.path == navbarActive ? 'active' : undefined)
-            a(href=item.path)!= item.name
+        if item.childs && item.childs.length > 0
+            li.dropdown
+                a.dropdown-toggle(href='javascript:window.location.href=window.location.href' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false')
+                    != item.name
+                    i.fa.fa-caret-down
+                ul.dropdown-menu
+                    each child in item.childs
+                        li(class=(child.path == navbarActive ? 'active' : undefined))
+                            a(href=child.path)!= child.name
+                //<li role='separator' class='divider'></li>
+        else
+            li(class=(item.path == navbarActive ? 'active' : undefined))
+                - linkTarget = item.blank ? '_blank' : undefined
+                a(href=item.path target=linkTarget)!= item.name
