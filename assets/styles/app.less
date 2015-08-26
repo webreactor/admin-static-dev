@@ -1,9 +1,12 @@
 @import "core";
+
+@import "vendor/jgrowl";
 @import "vendor/select2";
 @import "vendor/daterangepicker";
-@import "vendor/wysihtml5";
+@import "vendor/summernote";
+@import "vendor/fine-uploader";
 
-//@import "pages/example";
+@import "pages/list";
 
 // remove browser-sync banner
 #__bs_notify__ {
@@ -52,7 +55,7 @@ body {
     position:         fixed;
     padding:          20px;
     right:            0;
-    top:              (@navbar-height + 1);
+    top:              (@navbar-height + @navbar-border-width);
     z-index:          1000;
 }
 
@@ -99,24 +102,5 @@ body {
 
     .page-header {
         margin-top: 0;
-    }
-}
-
-.page-list {
-    .search-form {
-        .daterange {
-            text-align: center;
-            width:      270px;
-        }
-    }
-
-    .table {
-        th {
-            white-space: nowrap;
-        }
-
-        tr {
-            cursor: pointer;
-        }
     }
 }

@@ -1,0 +1,31 @@
+@import "font-awesome";
+
+.treeview-padding(@level, @count, @padding) when (@level <= @count) {
+    .treeview-padding((@level + 1); @count; @padding);
+
+    .level-@{level} {
+        .name {
+            padding-left: (@padding * (@level - 1));
+        }
+    }
+}
+
+.treeview {
+//    .treeview-padding(1, 10, 40px);
+
+    .list-group-item {
+        cursor:         pointer;
+//        padding-bottom: 5px;
+//        padding-top:    5px;
+
+//        &:before {
+//            .fa();
+//
+//            content: @fa-var-plus;
+//        }
+//
+//        &.collapsed:before {
+//            content: @fa-var-minus;
+//        }
+    }
+}

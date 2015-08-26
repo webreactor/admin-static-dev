@@ -12,11 +12,14 @@
         ],
         "form":  [
             "./assets/templates/data/form.json"
+        ],
+        "tree":  [
+            "./assets/templates/data/tree.json"
         ]
     },
     "build": {
         "src":  {
-            "templates": [
+            "tpl": [
                 "./assets/templates/*.jade"
             ],
             "css":       {
@@ -27,15 +30,14 @@
             "js":        {
                 "app":  [
                     "bower_components/jquery/dist/jquery.js",
+                    "bower_components/jgrowl/jquery.jgrowl.js",
                     "bower_components/select2/dist/js/select2.js",
                     "bower_components/select2/dist/js/i18n/ru.js",
                     "bower_components/moment/moment.js",
                     "bower_components/moment/locale/ru.js",
                     "bower_components/bootstrap-daterangepicker/daterangepicker.js",
-                    "bower_components/handlebars/handlebars.runtime.js",
-                    "bower_components/wysihtml5x/dist/wysihtml5x-toolbar.js",
-                    "bower_components/bootstrap3-wysihtml5-bower/dist/bootstrap3-wysihtml5.js",
-                    "bower_components/bootstrap3-wysihtml5-bower/dist/locales/bootstrap-wysihtml5.ru-RU.js",
+                    "bower_components/summernote/dist/summernote.js",
+                    "bower_components/summernote/lang/summernote-ru-RU.js",
                     "assets/scripts/components/tooltip.js",
                     "assets/scripts/components/affix.js",
                     "assets/scripts/components/alert.js",
@@ -51,10 +53,14 @@
                     "assets/scripts/app.js"
                 ],
                 "list": [
-                    "assets/scripts/list.js"
+                    "assets/scripts/pages/list.js"
                 ],
                 "form": [
-                    "assets/scripts/form.js"
+                    "assets/vendor/fine-uploader/jquery.fine-uploader.js",
+                    "assets/scripts/pages/form.js"
+                ],
+                "tree": [
+                    "assets/scripts/pages/tree.js"
                 ]
             },
             "img":       [
@@ -62,7 +68,12 @@
                 "assets/images/**/*.gif",
                 "assets/images/**/*.jpg",
                 "assets/images/**/*.jpeg",
-                "assets/images/**/*.ico"
+                "assets/images/**/*.ico",
+                "assets/vendor/**/*.png",
+                "assets/vendor/**/*.gif",
+                "assets/vendor/**/*.jpg",
+                "assets/vendor/**/*.jpeg",
+                "assets/vendor/**/*.ico"
             ],
             "fonts":     [
                 "assets/fonts/**/*",
@@ -70,7 +81,7 @@
             ]
         },
         "dest": {
-            "templates": "web",
+            "tpl": "web",
             "css":       "web/css",
             "js":        "web/js",
             "img":       "web/img",
@@ -78,7 +89,7 @@
         }
     },
     "watch": {
-        "templates": [
+        "tpl": [
             "./assets/templates/**/*.jade",
             "./assets/templates/**/*.json"
         ],

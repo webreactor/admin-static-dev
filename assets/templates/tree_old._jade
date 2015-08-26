@@ -1,0 +1,24 @@
+extends includes/layout
+
+prepend title
+    = 'Каталог / '
+
+append scripts
+    script(src='js/tree.js')
+
+append breadcrumb
+    li(class='active')= 'Каталог'
+
+append content
+    h1(class='page-header')= 'Каталог'
+    mixin printTrees(treeItems)
+        each item in treeItems
+            li(class='list-group-item')
+                i(class='fa fa-plus')
+                span(class='name')= item.name
+                if item.childs && item.childs.length > 0
+                    ul(class='childs')
+                        +printTrees(item.childs)
+    div(class='treeview')
+        ul(class='list-group')
+            +printTrees(treeItems)

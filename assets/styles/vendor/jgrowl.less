@@ -1,0 +1,36 @@
+@import (inline) "../../../bower_components/jgrowl/jquery.jgrowl.css";
+
+.jGrowl-notification,
+.jGrowl-closer {
+    .opacity(1);
+}
+
+.jgrowl-variant(@background; @border; @text-color) {
+    background-color: @background;
+    border-color:     @border;
+    color:            @text-color;
+
+    a {
+        color: @text-color;
+
+        &:hover {
+            color: darken(@text-color, 5%);
+        }
+    }
+}
+
+.jgrowl-success {
+    .jgrowl-variant(@jgrowl-success-bg; @jgrowl-success-border; @jgrowl-success-text);
+}
+
+.jgrowl-info {
+    .jgrowl-variant(@jgrowl-info-bg; @jgrowl-info-border; @jgrowl-info-text);
+}
+
+.jgrowl-warning {
+    .jgrowl-variant(@jgrowl-warning-bg; @jgrowl-warning-border; @jgrowl-warning-text);
+}
+
+.jgrowl-danger {
+    .jgrowl-variant(@jgrowl-danger-bg; @jgrowl-danger-border; @jgrowl-danger-text);
+}

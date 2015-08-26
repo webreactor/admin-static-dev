@@ -11,7 +11,7 @@
     position:      relative;
     min-height:    @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
     margin-bottom: @navbar-margin-bottom;
-    border:        1px solid transparent;
+    border:        @navbar-border-width solid @navbar-border-color;
     border-radius: @navbar-border-radius;
 
     // Prevent floats from breaking the navbar
@@ -237,17 +237,6 @@
         }
     }
 
-    .navbar-toggle {
-        border-color: @navbar-default-toggle-border-color;
-        &:hover,
-        &:focus {
-            background-color: @navbar-default-toggle-hover-bg;
-        }
-        .icon-bar {
-            background-color: @navbar-default-toggle-icon-bar-bg;
-        }
-    }
-
     .navbar-form {
         border-color: @navbar-default-border;
     }
@@ -336,18 +325,6 @@
                 color:            @navbar-inverse-link-disabled-color;
                 background-color: @navbar-inverse-link-disabled-bg;
             }
-        }
-    }
-
-    // Darken the responsive nav toggle
-    .navbar-toggle {
-        border-color: @navbar-inverse-toggle-border-color;
-        &:hover,
-        &:focus {
-            background-color: @navbar-inverse-toggle-hover-bg;
-        }
-        .icon-bar {
-            background-color: @navbar-inverse-toggle-icon-bar-bg;
         }
     }
 

@@ -2,12 +2,13 @@
     "name":         "ecto/xcom-frontend",
     "private":      true,
     "dependencies": {
-        "jquery":                     "1.*",
-        "normalize":                  "git@github.com:necolas/normalize.css.git",
-        "font-awesome":               "*",
-        "select2":                    "~4.0.0",
-        "moment":                     "~2.10.6",
-        "bootstrap-daterangepicker":  "~2.0.9",
-        "bootstrap3-wysihtml5-bower": "~0.3.3"
+        "jquery":                    "1.*",
+        "normalize":                 "git@github.com:necolas/normalize.css.git",
+        "font-awesome":              "*",
+        "jgrowl":                    "git@github.com:stanlemon/jGrowl.git",
+        "select2":                   "~4.0.0",
+        "moment":                    "~2.10.6",
+        "bootstrap-daterangepicker": "~2.0.9",
+        "summernote":                "~0.6.16"
     }
 }
