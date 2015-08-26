@@ -9,6 +9,7 @@
         "select2":                   "~4.0.0",
         "moment":                    "~2.10.6",
         "bootstrap-daterangepicker": "~2.0.9",
-        "summernote":                "~0.6.16"
+        "summernote":                "~0.6.16",
+        "fine-uploader":             "git@github.com:FineUploader/fine-uploader.git"
     }
 }

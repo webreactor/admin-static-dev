@@ -86,8 +86,8 @@ gulp.task('tpl', function () {
 
 gulp.task('js-app', function () {
     return gulp.src(config.build.src.js.app)
-//        .pipe(gulpUglify())
-//        .on('error', handleError)
+        .pipe(gulpUglify())
+        .on('error', handleError)
         .pipe(gulpWrapper({ header: '\n// ${filename}\n\n' }))
         .pipe(gulpConcat('app.js'))
         .pipe(gulp.dest(config.build.dest.js))
@@ -96,8 +96,8 @@ gulp.task('js-app', function () {
 
 gulp.task('js-list', function () {
     return gulp.src(config.build.src.js.list)
-//        .pipe(gulpUglify())
-//        .on('error', handleError)
+        .pipe(gulpUglify())
+        .on('error', handleError)
         .pipe(gulpWrapper({ header: '\n// ${filename}\n\n' }))
         .pipe(gulpConcat('list.js'))
         .pipe(gulp.dest(config.build.dest.js))
@@ -106,8 +106,8 @@ gulp.task('js-list', function () {
 
 gulp.task('js-form', function () {
     return gulp.src(config.build.src.js.form)
-//        .pipe(gulpUglify())
-//        .on('error', handleError)
+        .pipe(gulpUglify())
+        .on('error', handleError)
         .pipe(gulpWrapper({ header: '\n// ${filename}\n\n' }))
         .pipe(gulpConcat('form.js'))
         .pipe(gulp.dest(config.build.dest.js))
@@ -116,8 +116,8 @@ gulp.task('js-form', function () {
 
 gulp.task('js-tree', function () {
     return gulp.src(config.build.src.js.tree)
-//        .pipe(gulpUglify())
-//        .on('error', handleError)
+        .pipe(gulpUglify())
+        .on('error', handleError)
         .pipe(gulpWrapper({ header: '\n// ${filename}\n\n' }))
         .pipe(gulpConcat('tree.js'))
         .pipe(gulp.dest(config.build.dest.js))

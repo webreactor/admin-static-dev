@@ -56,7 +56,7 @@
                     "assets/scripts/pages/list.js"
                 ],
                 "form": [
-                    "assets/vendor/fine-uploader/jquery.fine-uploader.js",
+                    "bower_components/fine-uploader/client/jquery.fine-uploader.js",
                     "assets/scripts/pages/form.js"
                 ],
                 "tree": [
