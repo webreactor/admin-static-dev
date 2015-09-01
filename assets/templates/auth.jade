@@ -5,7 +5,7 @@ prepend title
 
 append content
     form.form-signin(action='auth.html' method='get')
-        h2.form-signin-heading= 'Xcom-Shop'
+        h1.form-signin-heading= 'Reactor'
         div.form-group
             div.input-group
                 div.input-group-addon
@@ -16,5 +16,10 @@ append content
                 div.input-group-addon
                     i.fa.fa-fw.fa-key
                 input.form-control(type='password' required='required' tabindex='2' placeholder='Пароль')
+        div.form-group
+            div.checkbox
+                label
+                    input(type='checkbox' checked='checked')
+                    = 'Запомнить пароль'
         div.form-group
             button.btn.btn-primary.btn-block(type='submit' tabindex='3')= 'Войти'

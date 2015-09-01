@@ -1,0 +1,50 @@
+.sidebar {
+    background-color: #f5f5f5;
+    border-right:     1px solid #eeeeee;
+    bottom:           (@footer-height + @navbar-border-width * 2);
+    left:             0;
+    min-width:        195px;
+    overflow-x:       hidden;
+    overflow-y:       auto;
+    position:         fixed;
+    padding:          20px;
+    right:            0;
+    top:              (@navbar-height + @navbar-border-width * 2);
+    z-index:          1000;
+}
+
+.sidebar-nav {
+    margin-right: -21px;
+    margin-left:  -20px;
+
+    > li {
+        > a {
+            font-size:   14px;
+            font-weight: bold;
+            padding:     3px 15px;
+        }
+    }
+
+    &,
+    .active {
+        > a {
+            &,
+            &:hover,
+            &:focus {
+                color:            #ffffff;
+                background-color: #428bca;
+            }
+        }
+    }
+
+    ul {
+        li {
+            > a {
+                font-size:      13px;
+                padding-bottom: 3px;
+                padding-left:   25px;
+                padding-top:    3px;
+            }
+        }
+    }
+}

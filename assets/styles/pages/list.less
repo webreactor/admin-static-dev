@@ -7,12 +7,42 @@
     }
 
     .table {
+        tr {
+            cursor: pointer;
+        }
+
         th {
             white-space: nowrap;
         }
 
-        tr {
-            cursor: pointer;
+        tbody > tr {
+            &.popovered {
+                background-color: darken(@table-bg-active, 5%);
+            }
+        }
+    }
+
+    nav {
+        .clearfix();
+
+        .info {
+            .pull-left();
+
+            display:     inline-block;
+            margin-top:  10px;
+            white-space: nowrap;
+
+            select {
+                margin-left:  2px;
+                margin-right: 2px;
+            }
+        }
+
+        .pagination {
+            .pull-right();
+
+            margin-bottom: 0;
+            margin-top:    0;
         }
     }
 }

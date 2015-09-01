@@ -1,5 +1,5 @@
 {
-    "name":            "ecto-xcom-frontend",
+    "name":            "webreactor-admin-static-dev",
     "version":         "1.0.0",
     "private":         true,
     "main":            "gulpfile.js",

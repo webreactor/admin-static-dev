@@ -7,11 +7,13 @@ append scripts
     script(src='js/app.js')
 
 append body
-    include header
-    div.container-fluid
-        div.row
-            div.col-2.sidebar
-                include sidebar
-            div.col-10.col-offset-2.main
-                include breadcrumb
-                block content
+    div#page-container
+        include header
+        div.container-fluid
+            div.row
+                div.col-2.sidebar
+                    include sidebar
+                div.col-10.col-offset-2.main
+                    include breadcrumb
+                    block content
+        include footer

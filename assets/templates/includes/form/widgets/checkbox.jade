@@ -1,0 +1,18 @@
+div.form-group
+    label.col-3.control-label= 'Чекбоксы'
+    div.col-9
+        - i = 1
+        each type in ['', 'circle']
+            if type != ''
+                - typeClass = 'checkbox-' + type
+            else
+                - typeClass = ''
+            each style in ['', 'primary', 'info', 'danger', 'warning']
+                if style != ''
+                    - styleClass = ' checkbox-' + style
+                else
+                    - styleClass = ''
+                div.checkbox(class=typeClass + styleClass)
+                    input(type='checkbox' id='checkbox' + i checked='checked')
+                    label(for='checkbox' + i)= 'Вариант ' + i
+                - i++

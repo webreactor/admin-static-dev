@@ -1,23 +1,22 @@
 extends includes/layout
 
 prepend title
-    = 'Новости / '
+    = 'Пример списка / '
 
 append scripts
     script(src='js/list.js')
 
 append breadcrumb
-    li.active= 'Новости'
+    li.active= 'Пример списка'
 
 append content
-    h1.page-header= 'Новости'
     div.page-list
         div.well.well-sm
             form.form-inline.search-form
                 div.input-group
                     span.input-group-addon
                         i.fa.fa-calendar
-                    input.form-control.daterange#daterangepicker(type='text' placeholder='Дата' value='2015.08.01 10:00 - 2015.08.31 21:00')
+                    input.form-control.daterange#date-time-range-picker(type='text' placeholder='Дата' value='2015.08.01 10:00 - 2015.08.31 21:00')
                 input.form-control(type='text' placeholder='Заголовок')
                 select.form-control#select2
                     option
@@ -27,7 +26,7 @@ append content
                 button.btn.btn-default(type='submit')
                     i.fa.fa-search
                     = ' Найти'
-        table.table.table-striped.table-condensed.table-hover
+        table.table.table-striped.table-condensed.table-hover#datatable
             thead
                 tr
                     th
@@ -39,34 +38,35 @@ append content
                     th
                         = 'Автор '
                         i.fa.fa-sort
-                    th
             tbody
                 each item in listItems
                     tr
                         td= item.date
                         td= item.title
                         td= item.author
-                        td(style='white-space: nowrap')
-                            a.btn.btn-xs.btn-default(href='form.html' title='Редактировать')
-                                i.fa.fa-pencil
-                            buttona.btn.btn-xs.btn-default.delete-confirm-popover(title='' data-delete-url='javascript:window.location.href=window.location.href' data-original-title='Удалить')
-                                i.fa.fa-times
         nav
+            div.info
+                = 'Показано '
+                select
+                    option= '10'
+                    option= '25'
+                    option= '50'
+                = ' записей из 165.'
             ul.pagination
                 li.active
-                    a(href='javascript:window.location.href=window.location.href')= '1'
+                    a(href='')= '1'
                 li
-                    a(href='javascript:window.location.href=window.location.href')= '2'
+                    a(href='')= '2'
                 li
-                    a(href='javascript:window.location.href=window.location.href')= '3'
+                    a(href='')= '3'
                 li
-                    a(href='javascript:window.location.href=window.location.href')= '4'
+                    a(href='')= '4'
                 li
-                    a(href='javascript:window.location.href=window.location.href')= '5'
+                    a(href='')= '5'
                 li.disabled
                     span …
                 li
-                    a(href='javascript:window.location.href=window.location.href')= '17'
+                    a(href='')= '17'
                 li
-                    a(href='javascript:window.location.href=window.location.href' aria-label='Вперед')
+                    a(href='' aria-label='Вперед')
                         span(aria-hidden='true') Вперед

@@ -5,6 +5,7 @@
 /node_modules/*
 /var/logs/*
 /web/css/*
+/web/data/*
 /web/js/*
 /web/img/*
 /web/fonts/*

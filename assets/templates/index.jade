@@ -1,12 +1,10 @@
 extends includes/layout
 
-block breadcrumb-wrap
-    ol.breadcrumb
-        block breadcrumb
-            li
-                a(href='http://xcom-shop.ru/')
-                    i.fa.fa-home
-            li.active= 'Панель администратора'
+prepend title
+    = 'Дашбоард / '
+
+append breadcrumb
+    li.active= 'Дашбоард'
 
 append content
-    h1.page-header= 'Панель администратора'
+    h1.page-header= 'Дашбоард'

@@ -1,22 +1,20 @@
-$(document).ready(function () {
-    App.treeViewInit();
-});
+App.initTreeView = function () {
+    $.getJSON('data/tree.json', function (data) {
+        var $treeView = $('#treeview'),
+            $tree     = $treeView.treeview({
+                expandIcon:   'fa fa-plus',
+                collapseIcon: 'fa fa-minus',
+//                nodeIcon:     'fa fa-bookmark',
+                levels:       1,
+                data:         data.treeItems
+            });
 
-App.treeViewInit = function () {
-//    var $treeView = $('.treeview'),
-//        $tree = $treeView.find('li');
-//
-//    $tree.click(function () {
-//        $this = $(this);
-//
-//        $childs = $treeView.find('.child-of-' + $this.data('tree-id'));
-//
-//        if ($this.hasClass('collapsed')) {
-//            $this.removeClass('collapsed');
-//            $childs.hide();
-//        } else {
-//            $this.addClass('collapsed');
-//            $childs.show();
-//        }
-//    });
+        App.initTreeActions($treeView);
+    });
 };
+
+App.initTreeActions = function (element) { };
+
+$(document).ready(function () {
+    App.initTreeView();
+});

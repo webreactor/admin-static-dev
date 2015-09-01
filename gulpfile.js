@@ -152,7 +152,14 @@ gulp.task('fonts', function () {
         .pipe(browserSync.stream());
 });
 
-gulp.task('build', ['img', 'fonts'], function () {
+gulp.task('data', function () {
+    return gulp.src(config.build.src.data)
+        .pipe(gulpNewer(config.build.dest.data))
+        .pipe(gulp.dest(config.build.dest.data))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('build', ['img', 'fonts', 'data'], function () {
     gulp.start(['tpl', 'css', 'js']);
 });
 
@@ -160,6 +167,7 @@ gulp.task('clean', function () {
     del([
         'web/*.html',
         'web/css/**/*',
+        'web/data/**/*',
         'web/js/**/*',
         'web/img/**/*',
         'web/fonts/**/*'
@@ -178,6 +186,7 @@ gulp.task('watch', function () {
     gulp.watch(config.watch.js.app, ['js']);
     gulp.watch(config.watch.img, ['img']);
     gulp.watch(config.watch.fonts, ['fonts']);
+    gulp.watch(config.watch.data, ['data']);
 });
 
 gulp.task('default', ['build']);

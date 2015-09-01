@@ -59,10 +59,13 @@
                     "assets/scripts/pages/list.js"
                 ],
                 "form": [
-                    "bower_components/fine-uploader/client/jquery.fine-uploader.js",
+                    "bower_components/jquery.maskedinput/dist/jquery.maskedinput.js",
+                    "assets/vendor/fine-uploader/jquery.fine-uploader.js",
+                    "bower_components/image-picker/image-picker/image-picker.js",
                     "assets/scripts/pages/form.js"
                 ],
                 "tree": [
+                    "bower_components/bootstrap-treeview/src/js/bootstrap-treeview.js",
                     "assets/scripts/pages/tree.js"
                 ]
             },
@@ -81,6 +84,9 @@
             "fonts": [
                 "assets/fonts/**/*",
                 "bower_components/font-awesome/fonts/**/*"
+            ],
+            "data":  [
+                "assets/data/**/*"
             ]
         },
         "dest": {
@@ -88,7 +94,8 @@
             "css":   "web/css",
             "js":    "web/js",
             "img":   "web/img",
-            "fonts": "web/fonts"
+            "fonts": "web/fonts",
+            "data":  "web/data"
         }
     },
     "watch": {
@@ -103,6 +110,7 @@
             "app": "./assets/scripts/**/*.js"
         },
         "img":   "assets/images/**/*",
-        "fonts": "assets/fonts/**/*"
+        "fonts": "assets/fonts/**/*",
+        "data":  "assets/data/**/*"
     }
 }

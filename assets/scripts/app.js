@@ -1,4 +1,34 @@
 var App = function () {
+    var initSideBar = function () {
+        var $sidebar      = $('.sidebar'),
+            initialBottom = $sidebar.css('bottom'),
+            initialTop    = $sidebar.css('top');
+
+        var move = function () {
+            var bottom = parseInt(initialBottom) - ($(document).height() - $(window).height() - $(window).scrollTop()),
+                top    = parseInt(initialTop) - $(window).scrollTop();
+
+            if (bottom < 0) {
+                bottom = 0;
+            }
+
+            if (top < 0) {
+                top = 0;
+            }
+
+            $sidebar.css('bottom', bottom);
+            $sidebar.css('top', top);
+        };
+
+        $(window).scroll(move);
+
+        move();
+    };
+
+    var configureMoment = function () {
+        moment.locale('ru');
+    };
+
     var jGrowlOptions = {
         closerTemplate: '<div>[ закрыть все ]</div>'
     };
@@ -29,7 +59,8 @@ var App = function () {
 
     return {
         init:    function () {
-            console.log('App initialized!');
+            initSideBar();
+            configureMoment();
         },
         success: function (message) {
             jGrowlSuccess(message);
