@@ -30,11 +30,18 @@ body {
     margin: 0 auto;
     width:  100%;
 
-    > .navbar .row > .col-10 {
-        .clearfix();
+    > .navbar .row {
+        > .col-2 {
+            background-color: #682209;
+            color:            white;
+        }
 
-        padding-left:  (@main-column-padding - @nav-link-padding-horizontal);
-        padding-right: (@main-column-padding - @nav-link-padding-horizontal);
+        > .col-10 {
+            .clearfix();
+
+            padding-left:  (@main-column-padding - @nav-link-padding-horizontal);
+            padding-right: (@main-column-padding - @nav-link-padding-horizontal);
+        }
     }
 
     .row > .main {
