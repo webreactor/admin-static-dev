@@ -150,8 +150,8 @@ output {
     textarea& {
         height:     auto;
         resize:     vertical;
-        min-height: 120px;
-        max-height: 800px;
+        min-height: 100px;
+        max-height: 1000px;
     }
 }
 
@@ -203,6 +203,23 @@ input[type="search"] {
 
 .form-group {
     margin-bottom: @form-group-margin-bottom;
+
+    &.required {
+        .control-label {
+            position: relative;
+
+            &:after {
+                content:  '*';
+                color:    @state-danger-text;
+                position: absolute;
+                right:    5px;
+            }
+        }
+    }
+}
+
+.form-actions {
+    margin-top: @form-actions-margin-top;
 }
 
 // Checkboxes and radios
@@ -444,16 +461,23 @@ input[type="checkbox"] {
     }
 }
 
-// Help text
-//
-// Apply to any element you wish to create light text for placement immediately
-// below a form control. Use for general help, formatting, or instructional text.
+.help-block,
+.error-block {
+    display:       block;
+    margin-top:    5px;
+    margin-bottom: 5px;
+}
 
 .help-block {
-    display:       block; // account for any element using help-block
-    margin-top:    5px;
-    margin-bottom: 10px;
-    color:         lighten(@text-color, 25%); // lighten the text some for contrast
+    color: lighten(@text-color, 25%);
+}
+
+.error-block {
+    color: @state-danger-text;
+}
+
+.warning-block {
+    color: @state-warning-text;
 }
 
 // Inline forms

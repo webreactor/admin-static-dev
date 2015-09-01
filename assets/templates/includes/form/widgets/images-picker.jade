@@ -1,0 +1,7 @@
+div.form-group
+    label.col-3.control-label(for='images-picker')= 'Выбор изображений'
+    div.col-9
+        select.form-control.image-picker#images-picker(multiple='multiple')
+            each option in formItems.imagePicker
+                - selected = option.selected ? 'selected' : undefined
+                option(data-img-src=option.image selected=selected)= option.name

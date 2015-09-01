@@ -1,61 +1,61 @@
-App.confirmPopoverInit = function () {
-    var $confirmPopover = $('.delete-confirm-popover');
+App.initTableActions = function () {
+    var $dataTable = $('#datatable'),
+        $rows      = $dataTable.find('tbody').find('tr');
 
-    $confirmPopover.popover({
+    $rows.popover({
         container: 'body',
-        content:   '<a href="" class="btn btn-xs btn-primary popover-go">Да</a> <button class="btn btn-xs btn-default popover-cancel">Отмена</button>',
+        content:   '<a href="" class="btn btn-block btn-xs btn-default">Редактировать</a><a href="" class="btn btn-block btn-xs btn-danger">Удалить</a>',
         html:      true,
-        placement: 'left',
-        template:  '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-title">Вы уверены?</h3><div class="popover-content"></div></div>'
-    }).on('shown.bs.popover', function (e) {
-        var $popover = $('.popover'),
-            $popoverGo = $popover.find('.popover-go'),
-            $popoverCancel = $popover.find('.popover-cancel');
+        placement: 'bottom'
+    }).on('shown.bs.popover', function () {
+        var $popover      = $('.popover'),
+            $popoverLinks = $popover.find('a');
 
-        $popoverGo.attr('href', $(e.target).attr('data-delete-url'));
-
-        $popoverGo.click(function () {
-            $confirmPopover.popover('hide');
+        $popoverLinks.click(function () {
+            $rows.popover('hide');
         });
+    }).click(function (event) {
+        var $popover    = $('.popover'),
+            $currentRow = $(this);
 
-        $popoverCancel.click(function () {
-            $confirmPopover.popover('hide');
-        });
-    }).click(function () {
-        var $current = $(this);
+        $currentRow.toggleClass('popovered');
 
-        $confirmPopover.each(function () {
-            if ($(this).get(0) !== $current.get(0)) {
+        $popover.css('left', event.pageX - ($popover.outerWidth() / 2));
+
+        $rows.each(function () {
+            if ($(this).get(0) !== $currentRow.get(0)) {
                 $(this).popover('hide');
+                $(this).removeClass('popovered');
             }
         });
     });
 };
 
-App.select2Init = function () {
+App.initSelect2 = function () {
     $('#select2').select2({
         allowClear:  true,
         placeholder: 'Автор'
     });
 };
 
-App.daterangepickerInit = function () {
-    moment.locale('ru');
-
-    $('#daterangepicker').daterangepicker({
+App.initDateRangePicker = function () {
+    $('#date-time-range-picker').daterangepicker({
         timePicker:          true,
         timePickerIncrement: 5,
         timePicker24Hour:    true,
         locale:              {
-            format:      'YYYY.MM.DD hh:mm',
-            applyLabel:  'Применить',
-            cancelLabel: 'Закрыть'
+            format:           'YYYY.MM.DD HH:mm:ss',
+            separator:        ' - ',
+            applyLabel:       'Применить',
+            cancelLabel:      'Отменить',
+            weekLabel:        '',
+            customRangeLabel: 'Custom Range'
         }
     });
 };
 
 $(document).ready(function () {
-    App.confirmPopoverInit();
-    App.select2Init();
-    App.daterangepickerInit();
+    App.initTableActions();
+    App.initSelect2();
+    App.initDateRangePicker();
 });

@@ -1,23 +1,13 @@
 extends includes/layout
 
 prepend title
-    = 'Каталог / '
+    = 'Пример дерева / '
 
 append scripts
     script(src='js/tree.js')
 
 append breadcrumb
-    li.active= 'Каталог'
+    li.active= 'Пример дерева'
 
 append content
-    h1.page-header= 'Каталог'
-    mixin printTrees(treeItems, level, parentID)
-        each item in treeItems
-            li(data-tree-id=item.id data-parent-tree-id=parentID)
-                span.name= item.name
-                if item.childs && item.childs.length > 0
-                    ul.childs
-                        +printTrees(item.childs, level + 1, item.id)
-    div.treeview
-        ul
-            +printTrees(treeItems, 1, undefined)
+    div#treeview

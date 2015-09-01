@@ -1,0 +1,17 @@
+div.form-group
+    label.col-3.control-label= 'Радио'
+    div.col-9
+        - i = 1
+        each style in ['', 'primary', 'info', 'danger', 'warning']
+            if style != ''
+                - styleClass = ' radio-' + style
+            else
+                - styleClass = ''
+            if i == 1
+                - checked = 'checked'
+            else
+                - checked = undefined
+            div.radio(class=styleClass)
+                input(type='radio' name='radio' id='radio' + i checked=checked)
+                label(for='radio' + i)= 'Вариант ' + i
+            - i++

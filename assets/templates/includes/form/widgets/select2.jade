@@ -1,0 +1,15 @@
+div.form-group
+    label.col-3.control-label(for='select')= 'Выбор'
+    div.col-5
+        select.form-control#select
+            each option in formItems.select
+                - selected = option.selected ? 'selected' : undefined
+                option(selected=selected)= option.name
+
+div.form-group
+    label.col-3.control-label(for='select-multiple')= 'Множественный выбор'
+    div.col-5
+        select.form-control#select-multiple(multiple='multiple')
+            each option in formItems.select
+                - selected = option.selected ? 'selected' : undefined
+                option(selected=selected)= option.name

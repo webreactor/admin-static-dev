@@ -2,7 +2,7 @@ ul.nav.navbar-nav.navbar-right
     each item in navbarItems
         if item.childs && item.childs.length > 0
             li.dropdown
-                a.dropdown-toggle(href='javascript:window.location.href=window.location.href' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false')
+                a.dropdown-toggle(href='' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false')
                     != item.name
                     i.fa.fa-caret-down
                 ul.dropdown-menu

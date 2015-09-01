@@ -27,11 +27,11 @@
             "childs": [
                 {
                     "name": "<i class=\"fa fa-cog\"></i> Настройки",
-                    "path": "javascript:window.location.href=window.location.href"
+                    "path": ""
                 },
                 {
                     "name": "<i class=\"fa fa-sign-out\"></i> Выход",
-                    "path": "javascript:window.location.href=window.location.href"
+                    "path": ""
                 }
             ]
         }
