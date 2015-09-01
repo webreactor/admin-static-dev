@@ -6,7 +6,8 @@ var App = function () {
 
         var move = function () {
             var bottom = parseInt(initialBottom) - ($(document).height() - $(window).height() - $(window).scrollTop()),
-                top    = parseInt(initialTop) - $(window).scrollTop();
+                top    = parseInt(initialTop) - $(window).scrollTop(),
+                left   = -$(window).scrollLeft();
 
             if (bottom < 0) {
                 bottom = 0;
@@ -18,6 +19,7 @@ var App = function () {
 
             $sidebar.css('bottom', bottom);
             $sidebar.css('top', top);
+            $sidebar.css('left', left);
         };
 
         $(window).scroll(move);
