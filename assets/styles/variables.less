@@ -18,12 +18,11 @@
 @gray-lighter: lighten(@gray-base, 93.5%);
 // #eee
 
-@brand-primary: darken(#428bca, 6.5%);
-// #337ab7
-@brand-success: #5cb85c;
-@brand-info: #5bc0de;
-@brand-warning: #f0ad4e;
-@brand-danger: #d9534f;
+@brand-primary: #dd4814;
+@brand-success: #38b44a;
+@brand-info: #772953;
+@brand-warning: #efb73e;
+@brand-danger: #df382c;
 
 //== Scaffolding
 //
@@ -146,29 +145,29 @@
 
 @btn-font-weight: normal;
 
-@btn-default-color: #333333;
-@btn-default-bg: #ffffff;
-@btn-default-border: #cccccc;
+@btn-default-color: #ffffff;
+@btn-default-bg: @gray-light;
+@btn-default-border: @btn-default-bg;
 
-@btn-primary-color: #ffffff;
+@btn-primary-color: @btn-default-color;
 @btn-primary-bg: @brand-primary;
-@btn-primary-border: darken(@btn-primary-bg, 5%);
+@btn-primary-border: @btn-primary-bg;
 
-@btn-success-color: #ffffff;
+@btn-success-color: @btn-default-color;
 @btn-success-bg: @brand-success;
-@btn-success-border: darken(@btn-success-bg, 5%);
+@btn-success-border: @btn-success-bg;
 
-@btn-info-color: #ffffff;
+@btn-info-color: @btn-default-color;
 @btn-info-bg: @brand-info;
-@btn-info-border: darken(@btn-info-bg, 5%);
+@btn-info-border: @btn-info-bg;
 
-@btn-warning-color: #ffffff;
+@btn-warning-color: @btn-default-color;
 @btn-warning-bg: @brand-warning;
-@btn-warning-border: darken(@btn-warning-bg, 5%);
+@btn-warning-border: @btn-warning-bg;
 
-@btn-danger-color: #ffffff;
+@btn-danger-color: @btn-default-color;
 @btn-danger-bg: @brand-danger;
-@btn-danger-border: darken(@btn-danger-bg, 5%);
+@btn-danger-border: @btn-danger-bg;
 
 @btn-link-disabled-color: @gray-light;
 
@@ -187,11 +186,10 @@
 @input-bg-disabled: @gray-lighter;
 
 //** Text color for `<input>`s
-@input-color: @gray;
+@input-color: @text-color;
 //** `<input>` border color
 @input-border: #cccccc;
 
-// TODO: Rename `@input-border-radius` to `@input-border-radius-base` in v4
 //** Default `.form-control` border radius
 // This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
 @input-border-radius: @border-radius-base;
@@ -204,7 +202,7 @@
 @input-border-focus: #66afe9;
 
 //** Placeholder text color
-@input-color-placeholder: #999999;
+@input-color-placeholder: @gray-light;
 
 //** Default `.form-control` height
 @input-height-base: (@line-height-computed + (@padding-base-vertical * 2) + 2);
@@ -218,7 +216,7 @@
 
 @form-actions-margin-top: 15px;
 
-@legend-color: @gray-dark;
+@legend-color: @text-color;
 @legend-border-color: #e5e5e5;
 
 //** Background color for textual input addons
@@ -245,12 +243,12 @@
 //** Dropdown link text color.
 @dropdown-link-color: @gray-dark;
 //** Hover color for dropdown links.
-@dropdown-link-hover-color: darken(@gray-dark, 5%);
+@dropdown-link-hover-color: #ffffff;
 //** Hover background for dropdown links.
-@dropdown-link-hover-bg: #f5f5f5;
+@dropdown-link-hover-bg: @component-active-bg;
 
 //** Active dropdown menu item text color.
-@dropdown-link-active-color: @component-active-color;
+@dropdown-link-active-color: #ffffff;
 //** Active dropdown menu item background color.
 @dropdown-link-active-bg: @component-active-bg;
 
@@ -289,7 +287,10 @@
 
 //== Container size
 //
+
 @container-width: (1140px + @grid-gutter-width);
+@page-min-width: @container-width;
+
 @container-fluid-min-width: @container-width;
 
 //== Navbar
@@ -307,53 +308,43 @@
 // 1px
 @navbar-border-color: transparent;
 
-@navbar-default-color: #777777;
-@navbar-default-bg: #f8f8f8;
+@navbar-default-color: #ffffff;
+@navbar-default-bg: darken(@brand-primary, 25%);
 @navbar-default-border: darken(@navbar-default-bg, 6.5%);
 
 // Navbar links
-@navbar-default-link-color: #777777;
-@navbar-default-link-hover-color: #333333;
-@navbar-default-link-hover-bg: transparent;
-@navbar-default-link-active-color: #555555;
-@navbar-default-link-active-bg: darken(@navbar-default-bg, 6.5%);
+@navbar-default-link-color: #ffffff;
+@navbar-default-link-hover-color: #ffffff;
+@navbar-default-link-hover-bg: darken(@navbar-default-bg, 15%);
+@navbar-default-link-active-color: #ffffff;
+@navbar-default-link-active-bg: darken(@navbar-default-bg, 10%);
 @navbar-default-link-disabled-color: #cccccc;
 @navbar-default-link-disabled-bg: transparent;
 
 // Navbar brand label
 @navbar-default-brand-color: @navbar-default-link-color;
-@navbar-default-brand-hover-color: darken(@navbar-default-brand-color, 10%);
-@navbar-default-brand-hover-bg: transparent;
-
-// Navbar toggle
-@navbar-default-toggle-hover-bg: #dddddd;
-@navbar-default-toggle-icon-bar-bg: #888888;
-@navbar-default-toggle-border-color: #dddddd;
+@navbar-default-brand-hover-color: #ffffff;
+@navbar-default-brand-hover-bg: none;
 
 //=== Inverted navbar
 // Reset inverted navbar basics
-@navbar-inverse-color: lighten(@gray-light, 15%);
-@navbar-inverse-bg: #222222;
+@navbar-inverse-color: #ffffff;
+@navbar-inverse-bg: @brand-info;
 @navbar-inverse-border: darken(@navbar-inverse-bg, 10%);
 
 // Inverted navbar links
-@navbar-inverse-link-color: lighten(@gray-light, 15%);
+@navbar-inverse-link-color: #ffffff;
 @navbar-inverse-link-hover-color: #ffffff;
-@navbar-inverse-link-hover-bg: transparent;
+@navbar-inverse-link-hover-bg: darken(@navbar-inverse-bg, 15%);
 @navbar-inverse-link-active-color: @navbar-inverse-link-hover-color;
 @navbar-inverse-link-active-bg: darken(@navbar-inverse-bg, 10%);
-@navbar-inverse-link-disabled-color: #444444;
+@navbar-inverse-link-disabled-color: #cccccc;
 @navbar-inverse-link-disabled-bg: transparent;
 
 // Inverted navbar brand label
 @navbar-inverse-brand-color: @navbar-inverse-link-color;
 @navbar-inverse-brand-hover-color: #ffffff;
-@navbar-inverse-brand-hover-bg: transparent;
-
-// Inverted navbar toggle
-@navbar-inverse-toggle-hover-bg: #333333;
-@navbar-inverse-toggle-icon-bar-bg: #ffffff;
-@navbar-inverse-toggle-border-color: #333333;
+@navbar-inverse-brand-hover-bg: none;
 
 //== Navs
 //
@@ -396,9 +387,9 @@
 @pagination-hover-bg: @gray-lighter;
 @pagination-hover-border: #dddddd;
 
-@pagination-active-color: #ffffff;
-@pagination-active-bg: @brand-primary;
-@pagination-active-border: @brand-primary;
+@pagination-active-color: @gray-light;
+@pagination-active-bg: #f5f5f5;
+@pagination-active-border: #dddddd;
 
 @pagination-disabled-color: @gray-light;
 @pagination-disabled-bg: #ffffff;
@@ -417,7 +408,7 @@
 @pager-active-bg: @pagination-active-bg;
 @pager-active-color: @pagination-active-color;
 
-@pager-disabled-color: @pagination-disabled-color;
+@pager-disabled-color: @gray-light;
 
 //== Jumbotron
 //
@@ -434,21 +425,21 @@
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-@state-success-text: #3c763d;
+@state-success-text: #468847;
 @state-success-bg: #dff0d8;
 @state-success-border: darken(spin(@state-success-bg, -10), 5%);
 
-@state-info-text: #31708f;
+@state-info-text: #3a87ad;
 @state-info-bg: #d9edf7;
 @state-info-border: darken(spin(@state-info-bg, -10), 7%);
 
-@state-warning-text: #8a6d3b;
+@state-warning-text: #c09853;
 @state-warning-bg: #fcf8e3;
-@state-warning-border: darken(spin(@state-warning-bg, -10), 5%);
+@state-warning-border: darken(spin(@state-warning-bg, -10), 3%);
 
-@state-danger-text: #a94442;
+@state-danger-text: #b94a48;
 @state-danger-bg: #f2dede;
-@state-danger-border: darken(spin(@state-danger-bg, -10), 5%);
+@state-danger-border: darken(spin(@state-danger-bg, -10), 3%);
 
 //== Tooltips
 //
@@ -500,7 +491,7 @@
 //##
 
 //** Default label background color
-@label-default-bg: @gray-light;
+@label-default-bg: @btn-default-bg;
 //** Primary label background color
 @label-primary-bg: @brand-primary;
 //** Success label background color
@@ -545,6 +536,7 @@
 //** Modal footer border color
 @modal-footer-border-color: @modal-header-border-color;
 
+@modal-width: 900px;
 @modal-dialog-width: 600px;
 
 //== Alerts
@@ -553,7 +545,7 @@
 
 @alert-padding: 15px;
 @alert-border-radius: @border-radius-base;
-@alert-link-font-weight: normal;
+@alert-link-font-weight: bold;
 
 @alert-success-bg: @state-success-bg;
 @alert-success-text: @state-success-text;

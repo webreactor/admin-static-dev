@@ -89,8 +89,3 @@ web — подготовленная к продакшену статика (с�
 * Fine Uploader (http://fineuploader.com/) — продвинутый загрузчик файлов.
 * Font Awesome Bootstrap Checkboxes & Radios (https://github.com/flatlogic/awesome-bootstrap-checkbox) - красивые чекбоксы и радио-кнопки.
 * Bootstrap Tree View (jonmiles/bootstrap-treeview).
-
-TODO
-==============
-
-* Поменять фирменные цвета на наши (черный, серый, красный, белый).
