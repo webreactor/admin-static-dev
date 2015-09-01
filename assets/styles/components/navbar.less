@@ -18,15 +18,6 @@
     &:extend(.clearfix all);
 }
 
-// Navbar heading
-//
-// Groups `.navbar-brand` and `.navbar-toggle` into a single component for easy
-// styling of responsive aspects.
-
-.navbar-header {
-    &:extend(.clearfix all);
-}
-
 //
 // Navbar alignment options
 //
@@ -181,11 +172,11 @@
 
 .navbar-right {
     .pull-right();
-    margin-right: -@navbar-padding-horizontal;
-
-    ~ .navbar-right {
-        margin-right: 0;
-    }
+    //margin-right: -@navbar-padding-horizontal;
+    //
+    //~ .navbar-right {
+    //    margin-right: 0;
+    //}
 }
 
 // Alternate navbars

@@ -1,5 +1,4 @@
 @import "core";
-
 @import "vendor/awesome-bootstrap-checkbox";
 @import "vendor/jgrowl";
 @import "vendor/select2";
@@ -8,7 +7,6 @@
 @import "vendor/fine-uploader";
 @import "vendor/image-picker";
 @import "vendor/boostrap-treeview";
-
 @import "pages/list";
 
 // remove browser-sync banner
@@ -18,6 +16,7 @@
 
 html {
     min-height: 100%;
+    min-width:  @container-width;
     height:     auto !important;
     height:     100%;
     position:   relative;
@@ -31,9 +30,16 @@ body {
     margin: 0 auto;
     width:  100%;
 
+    > .navbar .row > .col-10 {
+        .clearfix();
+
+        padding-left:  (@main-column-padding - @nav-link-padding-horizontal);
+        padding-right: (@main-column-padding - @nav-link-padding-horizontal);
+    }
+
     .row > .main {
-        padding-left:  40px;
-        padding-right: 40px;
+        padding-left:  @main-column-padding;
+        padding-right: @main-column-padding;
 
         .page-header {
             margin-top: 0;
@@ -61,18 +67,6 @@ body {
     .copyright {
         margin-bottom: 0;
         white-space:   nowrap;
-    }
-}
-
-.navbar-brand {
-    position: relative;
-
-    .version {
-        font-size: 13px;
-        display:   block;
-        position:  absolute;
-        right:     -5px;
-        top:       5px;
     }
 }
 

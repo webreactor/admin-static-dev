@@ -23,11 +23,14 @@
                 "./assets/templates/*.jade"
             ],
             "css":   {
-                "auth": [
+                "auth":            [
                     "./assets/styles/auth.less"
                 ],
-                "app":  [
+                "app":             [
                     "./assets/styles/app.less"
+                ],
+                "wysiwygExample": [
+                    "./assets/styles/wysiwyg-example.less"
                 ]
             },
             "js":    {
@@ -103,12 +106,8 @@
             "./assets/templates/**/*.jade",
             "./assets/templates/**/*.json"
         ],
-        "css":   {
-            "app": "./assets/styles/**/*.less"
-        },
-        "js":    {
-            "app": "./assets/scripts/**/*.js"
-        },
+        "css":   "./assets/styles/**/*.less",
+        "js":    "./assets/scripts/**/*.js",
         "img":   "assets/images/**/*",
         "fonts": "assets/fonts/**/*",
         "data":  "assets/data/**/*"

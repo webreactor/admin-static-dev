@@ -1,11 +1,11 @@
-extends includes/security_layout
+extends includes/security-layout
 
 prepend title
     = 'Авторизация / '
 
 append content
     form.form-signin(action='auth.html' method='get')
-        h1.form-signin-heading= 'Reactor'
+        h1.form-signin-heading= 'Reactor 4.0'
         div.form-group
             div.input-group
                 div.input-group-addon
@@ -19,7 +19,7 @@ append content
         div.form-group
             div.checkbox
                 label
-                    input(type='checkbox' checked='checked')
+                    input(type='checkbox' tabindex='3' checked='checked')
                     = 'Запомнить пароль'
         div.form-group
-            button.btn.btn-primary.btn-block(type='submit' tabindex='3')= 'Войти'
+            button.btn.btn-primary.btn-lg.btn-block(type='submit' tabindex='4')= 'Войти'

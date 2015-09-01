@@ -1,12 +1,7 @@
 nav.navbar.navbar-inverse
     div.container-fluid
-        div.navbar-header
-            a.navbar-brand(href='index.html')
-                = 'Reactor '
-                span.version 4.0
-            ul.nav.navbar-nav
-                li
-                    a(href='http://xcom-shop.ru/' target='_blank')
-                        = 'Перейти на сайт '
-                        i.fa.fa-external-link
-            include navbar
+        div.row
+            div.col-2
+                a.navbar-brand(href='index.html')= 'Reactor'
+            div.col-10
+                include navbar

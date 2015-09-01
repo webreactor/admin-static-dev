@@ -290,8 +290,7 @@
 //== Container size
 //
 @container-width: (1140px + @grid-gutter-width);
-
-@container-fluid-min-width: (1140px + @grid-gutter-width);
+@container-fluid-min-width: @container-width;
 
 //== Navbar
 //
@@ -361,7 +360,8 @@
 //##
 
 //=== Shared nav styles
-@nav-link-padding: 10px 15px;
+@nav-link-padding-vertical: 10px;
+@nav-link-padding-horizontal: 15px;
 @nav-link-hover-bg: @gray-lighter;
 
 @nav-disabled-link-color: @gray-light;
@@ -545,7 +545,6 @@
 //** Modal footer border color
 @modal-footer-border-color: @modal-header-border-color;
 
-@modal-width: 900px;
 @modal-dialog-width: 600px;
 
 //== Alerts
@@ -802,3 +801,5 @@
 @jgrowl-danger-bg: @state-danger-bg;
 @jgrowl-danger-text: @state-danger-text;
 @jgrowl-danger-border: @state-danger-border;
+
+@main-column-padding: 40px;

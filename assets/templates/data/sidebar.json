@@ -1,8 +1,8 @@
 {
     "sidebarItems": [
         {
-            "name": "<i class=\"fa fa-tachometer\"></i> Дашбоард",
-            "path": "index.html"
+            "name":   "<i class=\"fa fa-tachometer\"></i> Дашбоард",
+            "path":   "index.html"
         },
         {
             "name":   "Рассылки",

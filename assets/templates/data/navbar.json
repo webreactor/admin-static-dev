@@ -1,12 +1,7 @@
 {
-    "navbarItems": [
+    "navbarItems":      [
         {
-            "name":  "Страница авторизации <i class=\"fa fa-external-link\"></i>",
-            "path":  "auth.html",
-            "blank": true
-        },
-        {
-            "name":   "Примеры",
+            "name":   "Примеры страниц",
             "childs": [
                 {
                     "name": "Список",
@@ -23,17 +18,22 @@
             ]
         },
         {
-            "name": "ivan@ivanov.ru",
-            "childs": [
-                {
-                    "name": "<i class=\"fa fa-cog\"></i> Настройки",
-                    "path": ""
-                },
-                {
-                    "name": "<i class=\"fa fa-sign-out\"></i> Выход",
-                    "path": ""
-                }
-            ]
+            "name":   "Пример активного пункта",
+            "path":   "",
+            "active": true
+        },
+        {
+            "name":  "Пример страницы авторизации",
+            "path":  "auth.html",
+            "target": "_blank"
+        }
+    ],
+    "navbarRightItems": [
+        {
+            "name":        "<i class=\"fa fa-user\"></i> ivan@ivanov.ru",
+            "path":        "javascript:void(0)",
+            "dataToggle": "modal",
+            "dataTarget": "#userModal"
         }
     ]
 }

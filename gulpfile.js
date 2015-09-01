@@ -82,7 +82,19 @@ gulp.task('css-app', function () {
         .pipe(browserSync.stream());
 });
 
-gulp.task('css', ['css-auth', 'css-app']);
+gulp.task('css-wysiwyg-example', function () {
+    return gulp.src(config.build.src.css.wysiwygExample)
+        .pipe(gulpLess())
+        .on('error', handleError)
+        .pipe(gulpCsso())
+        .on('error', handleError)
+        .pipe(gulpWrapper({ header: '\n/* ${filename} */\n\n' }))
+        .pipe(gulpConcat('wysiwyg-example.css'))
+        .pipe(gulp.dest(config.build.dest.css))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('css', ['css-auth', 'css-app', 'css-wysiwyg-example']);
 
 gulp.task('tpl', function () {
     return gulp.src(config.build.src.tpl)
@@ -182,8 +194,8 @@ gulp.task('watch', function () {
     });
 
     gulp.watch(config.watch.tpl, ['tpl']);
-    gulp.watch(config.watch.css.app, ['css']);
-    gulp.watch(config.watch.js.app, ['js']);
+    gulp.watch(config.watch.css, ['css']);
+    gulp.watch(config.watch.js, ['js']);
     gulp.watch(config.watch.img, ['img']);
     gulp.watch(config.watch.fonts, ['fonts']);
     gulp.watch(config.watch.data, ['data']);

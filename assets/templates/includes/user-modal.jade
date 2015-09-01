@@ -1,0 +1,32 @@
+div.modal.fade#userModal(tabindex='-1' role='dialog' aria-labelledby='userModalLabel')
+    div.modal-dialog(role='document')
+        div.modal-content
+            div.modal-header
+                button.close(type='button' data-dismiss='modal' aria-label='Закрыть')
+                    i.fa.fa-close(aria-hidden='true')
+                h2.modal-title#userModalLabel= 'Авторизация под другим аккаунтом'
+            div.modal-body
+                div.row
+                    div.col-6.col-offset-3
+                        form.form-signin(action='auth.html' method='get')
+                            div.form-group
+                                div.input-group
+                                    div.input-group-addon
+                                        i.fa.fa-fw.fa-envelope-o
+                                    input.form-control(type='email' required='required' tabindex='1' placeholder='Электронная почта')
+                            div.form-group
+                                div.input-group
+                                    div.input-group-addon
+                                        i.fa.fa-fw.fa-key
+                                    input.form-control(type='password' required='required' tabindex='2' placeholder='Пароль')
+                            div.form-group
+                                div.checkbox.checkbox-primary
+                                    input#remember(type='checkbox' tabindex='3' checked='checked')
+                                    label(for='remember')= 'Запомнить пароль'
+                            div.form-group
+                                button.btn.btn-primary.btn-block(type='submit' tabindex='4')= 'Войти'
+            div.modal-footer
+                button.btn.btn-default(type='button' data-dismiss='modal')= 'Закрыть'
+                a.btn.btn-primary(href='http://xcom-shop.ru/' target='_blank')
+                    = 'Перейти на сайт '
+                    i.fa.fa-external-link.margin-left
