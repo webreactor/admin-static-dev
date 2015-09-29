@@ -23,10 +23,10 @@
                 "./assets/templates/*.jade"
             ],
             "css":   {
-                "auth":            [
+                "auth":           [
                     "./assets/styles/auth.less"
                 ],
-                "app":             [
+                "app":            [
                     "./assets/styles/app.less"
                 ],
                 "wysiwygExample": [
@@ -59,6 +59,7 @@
                     "assets/scripts/app.js"
                 ],
                 "list": [
+                    "assets/scripts/components/actions.js",
                     "assets/scripts/pages/list.js"
                 ],
                 "form": [
@@ -68,7 +69,8 @@
                     "assets/scripts/pages/form.js"
                 ],
                 "tree": [
-                    "bower_components/bootstrap-treeview/src/js/bootstrap-treeview.js",
+                    "assets/scripts/components/treeview.js",
+                    "assets/scripts/components/actions.js",
                     "assets/scripts/pages/tree.js"
                 ]
             },

@@ -2,51 +2,61 @@
     "navbarActive": "list.html",
     "listItems":    [
         {
+            "id":     1,
             "date":   "11.03.2015",
             "title":  "Надежные блоки питания AeroCool",
             "author": "shaxtep@gmail.com"
         },
         {
+            "id":     2,
             "date":   "11.03.2015",
             "title":  "Покупать с PayPal стало ещё приятнее",
             "author": "begmart@mail.ru"
         },
         {
+            "id":     3,
             "date":   "11.03.2015",
             "title":  "Silicon Power дарит подарки",
             "author": "begmart@mail.ru"
         },
         {
+            "id":     4,
             "date":   "09.03.2015",
             "title":  "Microsoft Lumia 535: первый телефон Microsoft",
             "author": "shaxtep@gmail.com"
         },
         {
+            "id":     5,
             "date":   "07.03.2015",
             "title":  "BenQ BL3201PT: 4K-монитор для профессионалов",
             "author": "shaxtep@gmail.com"
         },
         {
+            "id":     6,
             "date":   "06.03.2015",
             "title":  "Yealink VC400: коммуникационная система класса high-end",
             "author": "shaxtep@gmail.com"
         },
         {
+            "id":     7,
             "date":   "05.03.2015",
             "title":  "Этим мартом ASUS дарит подарки к материнским платам!",
             "author": "begmart@mail.ru"
         },
         {
+            "id":     8,
             "date":   "05.03.2015",
             "title":  "Компактный и мощный планшет iRu M720G",
             "author": "shaxtep@gmail.com"
         },
         {
+            "id":     9,
             "date":   "04.03.2015",
             "title":  "Качественные и практичные корпуса AeroCool",
             "author": "shaxtep@gmail.com"
         },
         {
+            "id":     10,
             "date":   "04.03.2015",
             "title":  "Доступна доставка товаров в Севастополь через ТК ПЭК",
             "author": "dmitry.v.molchanov@gmail.com"

@@ -5,6 +5,26 @@ prepend title
 
 append scripts
     script(src='js/list.js')
+    script.
+        App.initTableActions = function () {
+            $('#datatable').find('tbody').find('tr').actions([
+                {
+                    title:   'Редактировать',
+                    url:     'list/{id}/update',
+                    exclude: [4, 6]
+                },
+                {
+                    title:        'Удалить',
+                    url:          'list/{id}/delete',
+                    confirmation: true,
+                    exclude:      [8]
+                }
+            ]);
+        };
+
+        $(document).ready(function () {
+            App.initTableActions();
+        });
 
 append breadcrumb
     li.active= 'Пример списка'
@@ -40,7 +60,7 @@ append content
                         i.fa.fa-sort
             tbody
                 each item in listItems
-                    tr
+                    tr(data-actions-id=item.id)
                         td= item.date
                         td= item.title
                         td= item.author

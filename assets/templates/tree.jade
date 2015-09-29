@@ -5,6 +5,26 @@ prepend title
 
 append scripts
     script(src='js/tree.js')
+    script.
+        App.initTreeActions = function () {
+            $.Actions('.node-treeview', [
+                {
+                    title:   'Редактировать',
+                    url:     'tree/{id}/update',
+                    exclude: [4, 6]
+                },
+                {
+                    title:        'Удалить',
+                    url:          'tree/{id}/delete',
+                    confirmation: true,
+                    exclude:      [8]
+                },
+                {
+                    title: 'Добавить потомка',
+                    url:   'list/{id}/childs/create'
+                }
+            ]);
+        };
 
 append breadcrumb
     li.active= 'Пример дерева'

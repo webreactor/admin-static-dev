@@ -3,7 +3,6 @@
 /app/config/parameters_third_party.yml
 /bower_components/*
 /node_modules/*
-/var/logs/*
 /web/css/*
 /web/data/*
 /web/js/*

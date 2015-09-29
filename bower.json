@@ -1,19 +1,17 @@
 {
-  "name": "webreactor/admin-static-dev",
-  "private": true,
-  "dependencies": {
-    "awesome-bootstrap-checkbox": "~0.3.5",
-    "bootstrap-daterangepicker": "~2.0.9",
-    "bootstrap-treeview": "jonmiles/bootstrap-treeview#~1.2.0",
-    "fine-uploader": "git@github.com:FineUploader/fine-uploader.git",
-    "font-awesome": "*",
-    "image-picker": "~0.2.4",
-    "jgrowl": "git@github.com:stanlemon/jGrowl.git",
-    "jquery": "1.*",
-    "jquery.maskedinput": "~1.4.1",
-    "moment": "~2.10.6",
-    "normalize": "git@github.com:necolas/normalize.css.git",
-    "select2": "~4.0.0",
-    "summernote": "~0.6.16"
-  }
+    "name":         "webreactor/admin-static-dev",
+    "dependencies": {
+        "awesome-bootstrap-checkbox": "~0.3.5",
+        "bootstrap-daterangepicker":  "~2.0.9",
+        "fine-uploader":              "git@github.com:FineUploader/fine-uploader.git",
+        "font-awesome":               "*",
+        "image-picker":               "~0.2.4",
+        "jgrowl":                     "git@github.com:stanlemon/jGrowl.git",
+        "jquery":                     "1.*",
+        "jquery.maskedinput":         "~1.4.1",
+        "moment":                     "~2.10.6",
+        "normalize":                  "git@github.com:necolas/normalize.css.git",
+        "select2":                    "~4.0.0",
+        "summernote":                 "~0.6.16"
+    }
 }

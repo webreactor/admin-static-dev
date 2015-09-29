@@ -2,6 +2,9 @@ nav.navbar.navbar-inverse
     div.container-fluid
         div.row
             div.col-2
-                a.navbar-brand(href='index.html')= 'Reactor'
+                a.navbar-brand(href='index.html')
+                    span
+                        = 'Reactor'
+                        span.version= '4.0'
             div.col-10
                 include navbar
