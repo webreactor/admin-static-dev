@@ -13,7 +13,7 @@
     Actions.prototype.init = function (elements, actions) {
         var lastItemID;
 
-        $('body').click(function (event) {
+        $('html').click(function (event) {
             var $target      = $(event.target),
                 selector     = elements instanceof jQuery ? elements.selector : elements,
                 $item        = $target.closest(selector),

@@ -3,6 +3,7 @@
     "dependencies": {
         "awesome-bootstrap-checkbox": "~0.3.5",
         "bootstrap-daterangepicker":  "~2.0.9",
+        "bootstrap-treeview":         "git@github.com:jonmiles/bootstrap-treeview.git",
         "fine-uploader":              "git@github.com:FineUploader/fine-uploader.git",
         "font-awesome":               "*",
         "image-picker":               "~0.2.4",
